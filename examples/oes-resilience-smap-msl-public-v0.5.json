@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "run_id": "oes-resilience-smap-msl-public-v0.5",
+  "project": {
+    "name": "OES-Resilience",
+    "version": "0.5.0 (public evaluation description)",
+    "source_url": "https://github.com/sparkainlp-x/oes-resilience",
+    "source_note": "The bundled public result files are copied from the linked repository. The saved run metadata reports package version 0.4.0; it does not record the evaluated-code commit."
+  },
+  "evidence_class": "public_dataset",
+  "dataset": {
+    "name": "NASA SMAP and MSL labeled telemetry anomaly dataset",
+    "kind": "public spacecraft telemetry; datasets reported separately",
+    "description": "Primary all-channel results at a 1% train-calibrated false-alarm target: 54 SMAP channels / 68 merged events and 27 MSL channels / 36 events. No raw telemetry is included.",
+    "source_url": "https://doi.org/10.1145/3219819.3219845"
+  },
+  "code": {
+    "version": "0.4.0 (saved run metadata; public evaluation described as v0.5.0)",
+    "commit": null
+  },
+  "seed": 42,
+  "protocol": {
+    "name": "smap-msl-blind-v1",
+    "version": "1",
+    "sha256": "927cf78fe7acc1cdc2a044a800b1e7aef2d954cd7e3b60a5b6b5b31b552b8ea3",
+    "locked_at": "2026-10-03 (source-stated)",
+    "lock_commit": "fdf99050046a9b1369eb5d2988ff7d5d8563e784",
+    "description": "Train-only threshold calibration; pooled event-level F1 per dataset; paired channel bootstrap and Wilcoxon tests with Holm correction. The project states that the lock preceded test-split scoring."
+  },
+  "baselines": ["maxabs", "zscore", "ewma", "cusum"],
+  "results": [
+    {"scope":"SMAP (all channels; target FP 0.01)","method":"oes32","metrics":[{"name":"event precision","value":0.262857,"unit":"fraction"},{"name":"event recall","value":0.676471,"unit":"fraction"},{"name":"event F1","value":0.378601,"unit":"fraction","interval_95":[0.273556,0.522167]},{"name":"false alarms per 1,000 test samples","value":0.29599,"unit":"alarm runs / 1,000 samples"}]},
+    {"scope":"SMAP (all channels; target FP 0.01)","method":"maxabs","metrics":[{"name":"event precision","value":0.537037,"unit":"fraction"},{"name":"event recall","value":0.426471,"unit":"fraction"},{"name":"event F1","value":0.47541,"unit":"fraction","interval_95":[0.328767,0.645841]},{"name":"false alarms per 1,000 test samples","value":0.057362,"unit":"alarm runs / 1,000 samples"}]},
+    {"scope":"SMAP (all channels; target FP 0.01)","method":"zscore","metrics":[{"name":"event precision","value":0.031878,"unit":"fraction"},{"name":"event recall","value":0.676471,"unit":"fraction"},{"name":"event F1","value":0.060887,"unit":"fraction","interval_95":[0.032237,0.155983]},{"name":"false alarms per 1,000 test samples","value":3.205408,"unit":"alarm runs / 1,000 samples"}]},
+    {"scope":"SMAP (all channels; target FP 0.01)","method":"ewma","metrics":[{"name":"event precision","value":0.046047,"unit":"fraction"},{"name":"event recall","value":0.779412,"unit":"fraction"},{"name":"event F1","value":0.086957,"unit":"fraction","interval_95":[0.060642,0.131869]},{"name":"false alarms per 1,000 test samples","value":2.519354,"unit":"alarm runs / 1,000 samples"}]},
+    {"scope":"SMAP (all channels; target FP 0.01)","method":"cusum","metrics":[{"name":"event precision","value":0.093604,"unit":"fraction"},{"name":"event recall","value":0.882353,"unit":"fraction"},{"name":"event F1","value":0.169252,"unit":"fraction","interval_95":[0.122105,0.256413]},{"name":"false alarms per 1,000 test samples","value":1.333101,"unit":"alarm runs / 1,000 samples"}]},
+    {"scope":"MSL (all channels; target FP 0.01)","method":"oes32","metrics":[{"name":"event precision","value":0.316456,"unit":"fraction"},{"name":"event recall","value":0.694444,"unit":"fraction"},{"name":"event F1","value":0.434783,"unit":"fraction","interval_95":[0.333291,0.575758]},{"name":"false alarms per 1,000 test samples","value":0.732412,"unit":"alarm runs / 1,000 samples"}]},
+    {"scope":"MSL (all channels; target FP 0.01)","method":"maxabs","metrics":[{"name":"event precision","value":0.5,"unit":"fraction"},{"name":"event recall","value":0.5,"unit":"fraction"},{"name":"event F1","value":0.5,"unit":"fraction","interval_95":[0.350868,0.657143]},{"name":"false alarms per 1,000 test samples","value":0.244137,"unit":"alarm runs / 1,000 samples"}]},
+    {"scope":"MSL (all channels; target FP 0.01)","method":"zscore","metrics":[{"name":"event precision","value":0.151515,"unit":"fraction"},{"name":"event recall","value":0.694444,"unit":"fraction"},{"name":"event F1","value":0.248756,"unit":"fraction","interval_95":[0.177911,0.389381]},{"name":"false alarms per 1,000 test samples","value":1.898846,"unit":"alarm runs / 1,000 samples"}]},
+    {"scope":"MSL (all channels; target FP 0.01)","method":"ewma","metrics":[{"name":"event precision","value":0.13198,"unit":"fraction"},{"name":"event recall","value":0.722222,"unit":"fraction"},{"name":"event F1","value":0.223176,"unit":"fraction","interval_95":[0.126982,0.423358]},{"name":"false alarms per 1,000 test samples","value":2.319304,"unit":"alarm runs / 1,000 samples"}]},
+    {"scope":"MSL (all channels; target FP 0.01)","method":"cusum","metrics":[{"name":"event precision","value":0.391304,"unit":"fraction"},{"name":"event recall","value":0.75,"unit":"fraction"},{"name":"event F1","value":0.514286,"unit":"fraction","interval_95":[0.387097,0.681319]},{"name":"false alarms per 1,000 test samples","value":0.569654,"unit":"alarm runs / 1,000 samples"}]}
+  ],
+  "result_label": "criterion_not_met",
+  "interpretation": "The stated v0.5 success criterion was not met. OES32 was significantly better than EWMA on SMAP only and was not significantly different from the other baselines; it did not significantly lose to any baseline. Because it did not significantly beat all four baselines on at least one dataset, the criterion fails. maxabs had a numerically higher pooled event F1 on both datasets and CUSUM on MSL, but those differences were not significant.",
+  "limitations": [
+    "This is one evaluation on public labeled SMAP/MSL spacecraft telemetry, not evidence about operational performance or any live system.",
+    "SMAP and MSL are distinct dataset scopes and are not pooled in this report.",
+    "The released data were pre-scaled using test-set min/max values; the protocol notes this inherited leakage affects every method.",
+    "Thresholds were calibrated on training samples only; the test labels were not used for tuning, according to the published protocol.",
+    "The raw telemetry is not redistributed here. Metric values are copied from the published aggregate output files; the individual baseline comparison table is bundled separately."
+  ],
+  "artifacts": [
+    {"path":"artifacts/oes-resilience-v0.5/smap_msl_protocol.json","role":"protocol","description":"Published machine-readable locked protocol.","sha256":"927cf78fe7acc1cdc2a044a800b1e7aef2d954cd7e3b60a5b6b5b31b552b8ea3"},
+    {"path":"artifacts/oes-resilience-v0.5/smap_msl_results/smap_msl_results.json","role":"results","description":"Published machine-readable aggregate results JSON; no raw telemetry.","sha256":"5263abb0359e1f19ba9da8a6f32e3c5c6e9c788809f929c1c066930facf30f72"},
+    {"path":"artifacts/oes-resilience-v0.5/smap_msl_results/smap_msl_summary.csv","role":"summary","description":"Published per-dataset/per-method metric summary CSV.","sha256":"ff5de8c39a1bc94791d56e512311fe6e4f49dc372e9e7195236069c531fca2ba"},
+    {"path":"artifacts/oes-resilience-v0.5/smap_msl_results/smap_msl_comparisons.csv","role":"comparisons","description":"Published paired baseline comparisons and criterion verdicts.","sha256":"01c3d5422fe486f4bb771fa9c7eeba0cf0f578b4dad8119c3d02458741a881cc"},
+    {"path":"artifacts/oes-resilience-v0.5/smap_msl_results/smap_msl_run_metadata.json","role":"run_metadata","description":"Published run metadata, including software package version and run timestamp.","sha256":"ef7941a5e583fc1d9b35f1a0756eca61c3091b2be60de640b57d954b74a81f78"},
+    {"path":"artifacts/oes-resilience-v0.5/smap_msl_results/SHA256SUMS","role":"upstream_checksum_list","description":"Published checksums for upstream result CSV/SVG outputs.","sha256":"ec66c3bf2e774132f36c90fe0783577da8bc5315b2af6ea420645ea3030d37d7"}
+  ]
+}

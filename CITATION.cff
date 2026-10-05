@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below. The bundled SMAP/MSL example preserves the upstream finding that the success criterion was not met; synthetic examples are labelled SYNTHETIC."
+title: "Evidence Passport: offline MVP that turns one experiment-run manifest into a static HTML evidence passport and normalized JSON"
+type: software
+authors:
+  - family-names: "Brisson"
+    given-names: "Jean-François"
+    affiliation: "Spark AI NLP"
+    orcid: "https://orcid.org/0009-0000-9778-5374"
+repository-code: "https://github.com/sparkainlp-x/evidence-passport"
+url: "https://sparkainlpx.xyz"
+license: AGPL-3.0-only
+version: "0.1.0"
+date-released: "2026-10-05"
+abstract: >-
+  Offline, Python-standard-library MVP that validates a single experiment-run
+  manifest and writes a static HTML evidence passport plus normalized JSON.
+  It records declared project, dataset, code, protocol, seed, baseline, metric,
+  limitation, and artifact details with fail-closed SHA-256 checks. It does not
+  generate data, score signals, or combine metrics. Bundled examples include an
+  OES-Resilience NASA SMAP/MSL public-dataset passport where the preregistered
+  success criterion was not met, and three SYNTHETIC examples. Not a validation
+  authority, provenance service, clinical device, or hardware product.
+keywords:
+  - evidence
+  - reproducibility
+  - research software
+  - audit
+  - offline
+  - synthetic data
+  - open science
+references:
+  - type: software
+    title: "OES-Resilience: benchmarking telemetry intelligence under real-world stress"
+    authors:
+      - family-names: "Brisson"
+        given-names: "Jean-François"
+        orcid: "https://orcid.org/0009-0000-9778-5374"
+    repository-code: "https://github.com/sparkainlp-x/oes-resilience"
+    doi: "10.5281/zenodo.23071166"

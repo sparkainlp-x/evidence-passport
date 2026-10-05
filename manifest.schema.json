@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/evidence-passport/run-manifest-v1.schema.json",
+  "title": "Evidence Passport Run Manifest v1",
+  "description": "A single saved experiment-run summary. Runtime validation additionally verifies local files and SHA-256 values.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "run_id", "project", "evidence_class", "dataset", "code", "seed", "protocol", "baselines", "results", "result_label", "interpretation", "limitations", "artifacts"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "run_id": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,100}$" },
+    "project": {
+      "type": "object", "additionalProperties": false,
+      "required": ["name", "version", "source_url", "source_note"],
+      "properties": {
+        "name": { "$ref": "#/$defs/nonEmpty" },
+        "version": { "$ref": "#/$defs/nonEmpty" },
+        "source_url": { "type": ["string", "null"], "format": "uri" },
+        "source_note": { "$ref": "#/$defs/nonEmpty" }
+      }
+    },
+    "evidence_class": { "enum": ["public_dataset", "synthetic"] },
+    "dataset": {
+      "type": "object", "additionalProperties": false,
+      "required": ["name", "kind", "description", "source_url"],
+      "properties": {
+        "name": { "$ref": "#/$defs/nonEmpty" },
+        "kind": { "$ref": "#/$defs/nonEmpty" },
+        "description": { "$ref": "#/$defs/nonEmpty" },
+        "source_url": { "type": ["string", "null"], "format": "uri" }
+      }
+    },
+    "code": {
+      "type": "object", "additionalProperties": false,
+      "required": ["version", "commit"],
+      "properties": {
+        "version": { "$ref": "#/$defs/nonEmpty" },
+        "commit": { "type": ["string", "null"], "minLength": 1 }
+      }
+    },
+    "seed": { "type": ["integer", "null"], "minimum": 0 },
+    "protocol": {
+      "type": "object", "additionalProperties": false,
+      "required": ["name", "version", "sha256", "locked_at", "lock_commit", "description"],
+      "properties": {
+        "name": { "$ref": "#/$defs/nonEmpty" },
+        "version": { "$ref": "#/$defs/nonEmpty" },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "locked_at": { "$ref": "#/$defs/nonEmpty" },
+        "lock_commit": { "type": ["string", "null"], "minLength": 1 },
+        "description": { "$ref": "#/$defs/nonEmpty" }
+      }
+    },
+    "baselines": { "type": "array", "items": { "$ref": "#/$defs/nonEmpty" }, "uniqueItems": true },
+    "results": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["scope", "method", "metrics"],
+        "properties": {
+          "scope": { "$ref": "#/$defs/nonEmpty" },
+          "method": { "$ref": "#/$defs/nonEmpty" },
+          "metrics": {
+            "type": "array", "minItems": 1,
+            "items": {
+              "type": "object", "additionalProperties": false,
+              "required": ["name", "value", "unit"],
+              "properties": {
+                "name": { "$ref": "#/$defs/nonEmpty" },
+                "value": { "type": ["number", "null"] },
+                "unit": { "$ref": "#/$defs/nonEmpty" },
+                "note": { "$ref": "#/$defs/nonEmpty" },
+                "interval_95": {
+                  "type": "array", "minItems": 2, "maxItems": 2,
+                  "items": { "type": "number" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "result_label": { "enum": ["criterion_met", "criterion_not_met", "descriptive_only", "synthetic_example", "not_stated"] },
+    "interpretation": { "$ref": "#/$defs/nonEmpty" },
+    "limitations": { "type": "array", "items": { "$ref": "#/$defs/nonEmpty" } },
+    "artifacts": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["path", "role", "description", "sha256"],
+        "properties": {
+          "path": { "type": "string", "minLength": 1, "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[^\\\\]+$" },
+          "role": { "$ref": "#/$defs/nonEmpty" },
+          "description": { "$ref": "#/$defs/nonEmpty" },
+          "sha256": { "$ref": "#/$defs/sha256" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "nonEmpty": { "type": "string", "minLength": 1, "pattern": ".*\\S.*" },
+    "sha256": { "type": "string", "pattern": "^[0-9a-fA-F]{64}$" }
+  }
+}

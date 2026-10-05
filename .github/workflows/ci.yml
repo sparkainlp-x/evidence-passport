@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Tests (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Unit tests (offline; stdlib only)
+        run: python -m unittest discover -s tests -v
+      - name: Validate and build bundled examples
+        run: |
+          mkdir -p /tmp/ep-reports
+          for m in examples/*.json; do
+            python evidence_passport.py validate "$m"
+            python evidence_passport.py build "$m" --out-dir /tmp/ep-reports
+          done
+          ls -la /tmp/ep-reports
+
+  forbidden-terms:
+    name: Forbidden-terms scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+      - name: Scan every tracked file (fails on a banned overclaim)
+        run: python3 tests/forbidden_terms.py
+      - name: The scanner itself fails on a planted banned term
+        run: |
+          git config user.email ci@example.invalid && git config user.name ci
+          # the banned word is assembled at run time so this workflow file itself stays clean
+          printf '%s%s\n' "consc" "ience" > planted.txt && git add planted.txt
+          if python3 tests/forbidden_terms.py; then echo "scanner did not fail"; exit 1; else echo "scanner failed as expected"; fi

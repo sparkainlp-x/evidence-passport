@@ -1,0 +1,45 @@
+{
+  "upload_type": "software",
+  "title": "Evidence Passport: offline MVP that turns one experiment-run manifest into a static HTML evidence passport and normalized JSON",
+  "version": "0.1.0",
+  "description": "<p><strong>Evidence Passport</strong> is an offline, Python-standard-library MVP that validates one experiment-run manifest and writes a static HTML evidence passport plus normalized JSON. It records declared project, dataset, code, protocol, seed, baseline, metric, limitation, and artifact details. It does <em>not</em> generate data, score signals, or combine metrics.</p><p><strong>Hash honesty.</strong> A matching SHA-256 shows only that a referenced local file is byte-for-byte consistent with the digest recorded in the bundle. It does not prove authorship, lock time, provenance authenticity, or measurement validity.</p><p><strong>Bundled examples.</strong> An OES-Resilience NASA SMAP/MSL public-dataset passport preserves the upstream finding that the preregistered success criterion was <strong>not</strong> met. Three further examples are labelled SYNTHETIC (Multi-Quantum OES, Digital-to-Wave Testbench, Signal Test Commons).</p><p><strong>Limits.</strong> Local metadata-and-reporting MVP only: not a validation authority, experiment runner, clinical device, hardware product, or provenance service. No NASA-beat claim.</p>",
+  "creators": [
+    {
+      "name": "Brisson, Jean-François",
+      "affiliation": "Spark AI NLP",
+      "orcid": "0009-0000-9778-5374"
+    }
+  ],
+  "access_right": "open",
+  "license": "agpl-3.0-only",
+  "language": "eng",
+  "keywords": [
+    "evidence",
+    "reproducibility",
+    "research software",
+    "audit",
+    "python",
+    "offline",
+    "synthetic data",
+    "open science"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/sparkainlp-x/evidence-passport",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.23071166",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "software"
+    }
+  ],
+  "communities": [
+    {
+      "identifier": "spark-ai-nlp"
+    }
+  ],
+  "notes": "Bundled SMAP/MSL example: criterion not met. Synthetic examples labelled SYNTHETIC. Commercial licensing: see COMMERCIAL-LICENSE.md. Do not mint a GitHub release until the Zenodo webhook is enabled."
+}

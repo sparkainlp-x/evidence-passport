@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evidence Passport — Signal Test Commons</title>
+<style>
+:root { color-scheme: light; --ink:#172b3a; --muted:#526675; --line:#d5dfe5; --paper:#fff; --wash:#f3f7f9; --blue:#154d70; --amber:#8a4b00; }
+* { box-sizing:border-box; } body { margin:0; background:var(--wash); color:var(--ink); font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; }
+main { max-width:1100px; margin:0 auto; padding:28px 18px 52px; } h1 { margin:.2em 0; font-size:clamp(1.8rem,4vw,2.6rem); line-height:1.15; } h2 { margin-top:1.8rem; border-bottom:1px solid var(--line); padding-bottom:.35rem; } h3 { margin:1.2rem 0 .5rem; }
+.badge { display:inline-block; padding:.25rem .65rem; border-radius:999px; font-weight:750; letter-spacing:.04em; font-size:.8rem; } .public { color:#0e3a58; background:#dceef8; } .synthetic { color:#6b3900; background:#fff0d6; }
+.card { background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:18px; margin:14px 0; } .callout { border-left:5px solid var(--blue); } .warning { border-left-color:var(--amber); }
+.meta { display:grid; grid-template-columns:minmax(130px,220px) 1fr; gap:.4rem 1rem; } .meta dt { color:var(--muted); font-weight:650; } .meta dd { margin:0; overflow-wrap:anywhere; }
+.table-wrap { overflow-x:auto; } table { border-collapse:collapse; width:100%; min-width:680px; background:white; } th,td { border:1px solid var(--line); text-align:left; padding:.55rem .65rem; vertical-align:top; } th { background:#eaf1f5; } code { overflow-wrap:anywhere; } small { color:var(--muted); } .footer { color:var(--muted); font-size:.9rem; margin-top:2rem; }
+@media(max-width:600px) { main { padding:18px 12px 36px; } .meta { grid-template-columns:1fr; gap:.1rem; } .meta dd { margin-bottom:.55rem; } }
+</style>
+</head>
+<body><main>
+<header><span class="badge synthetic">SYNTHETIC EXAMPLE</span><h1>Signal Test Commons</h1><p>Signal Test Commons 512-channel challenge · synthetic example</p></header>
+<div class="card callout "><strong>Interpretation</strong><p>The saved deterministic synthetic challenge reports all three generated fault episodes detected, zero false alarms on 67 clean frames, and group localization micro-Jaccard 0.9269813. These values describe only the bundled synthetic challenge and threshold.</p></div>
+<section><h2>Run record</h2><div class="card"><dl class="meta">
+<dt>Project version</dt><dd>challenge 1.0.0 (saved report)</dd><dt>Code version</dt><dd>not recorded in saved report</dd><dt>Code commit</dt><dd>Not recorded</dd>
+<dt>Evidence class</dt><dd>synthetic</dd><dt>Dataset type</dt><dd>synthetic deterministic multichannel challenge</dd><dt>Dataset notes</dt><dd>Saved challenge report contains 80 frames across four generated episodes on a 16 by 32 grid.</dd>
+<dt>Seed</dt><dd>7</dd><dt>Baselines</dt><dd>None recorded</dd><dt>Protocol</dt><dd>Signal Test Commons challenge · 1.0.0</dd>
+<dt>Protocol lock claim</dt><dd>not stated in the saved report <small>(source-stated; not independently time-verified)</small></dd>
+<dt>Protocol SHA-256</dt><dd><code>a94d8a66c4ef00c89e2e5fc8dfac29434eb802695be191683bcaa62e055cf85e</code></dd><dt>Protocol lock commit</dt><dd>Not recorded</dd>
+<dt>Project source</dt><dd>Not supplied</dd><dt>Dataset source</dt><dd>Not supplied</dd><dt>Source note</dt><dd>The saved example report and README were copied from the local project folder; no public repository URL or code commit is asserted.</dd>
+</dl></div></section>
+<section><h2>Reported metrics</h2><p>Values are copied from the declared run summary. This report does not calculate scores, rank methods, or combine metrics across scopes.</p><section><h3>Full saved challenge (80 synthetic frames)</h3><div class="table-wrap"><table><thead><tr><th>Method</th><th>Metric</th><th>Value</th><th>Unit</th><th>95% interval</th><th>Note</th></tr></thead><tbody><tr><td>absolute-threshold (threshold=4.5)</td><td>clean frames</td><td>67</td><td>frames</td><td>—</td><td>—</td></tr><tr><td>absolute-threshold (threshold=4.5)</td><td>fault episodes</td><td>3</td><td>episodes</td><td>—</td><td>—</td></tr><tr><td>absolute-threshold (threshold=4.5)</td><td>event detection recall</td><td>1</td><td>fraction</td><td>—</td><td>—</td></tr><tr><td>absolute-threshold (threshold=4.5)</td><td>false alarm frames</td><td>0</td><td>frames</td><td>—</td><td>—</td></tr><tr><td>absolute-threshold (threshold=4.5)</td><td>false alarms per clean frame</td><td>0</td><td>fraction</td><td>—</td><td>—</td></tr><tr><td>absolute-threshold (threshold=4.5)</td><td>group localization accuracy</td><td>0.9269813</td><td>micro Jaccard fraction</td><td>—</td><td><br><small>Computed in the source report over injected frames only: 1,041 localized frame-group pairs / 1,123 union pairs.</small></td></tr></tbody></table></div></section></section>
+<section><h2>Limitations</h2><ul><li>The challenge and all scores are synthetic. Its source explicitly says these results do not establish performance on physical instruments.</li><li>One seed (7), one threshold, and one 80-frame saved challenge are represented; the example includes no comparative baseline report.</li><li>Localization accuracy is calculated only on injected frames, as defined by the source; it is not a measure of physical spatial accuracy.</li></ul></section>
+<section><h2>Artifact integrity</h2><div class="card"><p><strong>All referenced files match their manifest SHA-256 values.</strong> This confirms bundle consistency only; it does not establish authorship, timing, provenance authenticity, or measurement validity.</p><ul><li><code>artifacts/signal-test-commons/README.md</code> — protocol; SHA-256 <code>a94d8a66c4ef00c89e2e5fc8dfac29434eb802695be191683bcaa62e055cf85e</code></li><li><code>artifacts/signal-test-commons/example_report.json</code> — results; SHA-256 <code>ee6189e1911c77bcb7ba55280091ec674c510486456f6f7a213a0909783cb7cd</code></li></ul><p>SHA-256 matching proves only byte-for-byte consistency between a referenced file and the digest recorded in this bundle. It does not prove authorship, when a file or protocol existed, provenance authenticity, or measurement or method validity.</p></div></section>
+<p class="footer">Generated by Evidence Passport 0.1.0. This is a static file; it loads no scripts, fonts, images, or services from the network.</p>
+</main></body></html>

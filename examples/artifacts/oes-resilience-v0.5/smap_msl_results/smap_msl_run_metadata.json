@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "smap-msl",
+    "evaluate",
+    "--data-dir",
+    "/workspace/oes-smap/cache/smap_msl",
+    "--protocol",
+    "reports/smap_msl_protocol.json",
+    "--expect-protocol-sha256",
+    "927cf78fe7acc1cdc2a044a800b1e7aef2d954cd7e3b60a5b6b5b31b552b8ea3",
+    "--out-dir",
+    "reports/smap_msl_results",
+    "--verify"
+  ],
+  "created_utc": "2026-10-03T22:30:15.229471+00:00",
+  "elapsed_seconds": 1.593465046986239,
+  "numpy": "2.5.3",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41",
+  "project": "OES-Resilience",
+  "python": "3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0]",
+  "version": "0.4.0"
+}

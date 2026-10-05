@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "run_id": "signal-test-commons-synthetic-example",
+  "project": {
+    "name": "Signal Test Commons",
+    "version": "challenge 1.0.0 (saved report)",
+    "source_url": null,
+    "source_note": "The saved example report and README were copied from the local project folder; no public repository URL or code commit is asserted."
+  },
+  "evidence_class": "synthetic",
+  "dataset": {
+    "name": "Signal Test Commons 512-channel challenge",
+    "kind": "synthetic deterministic multichannel challenge",
+    "description": "Saved challenge report contains 80 frames across four generated episodes on a 16 by 32 grid.",
+    "source_url": null
+  },
+  "code": {"version":"not recorded in saved report","commit":null},
+  "seed": 7,
+  "protocol": {
+    "name": "Signal Test Commons challenge",
+    "version": "1.0.0",
+    "sha256": "a94d8a66c4ef00c89e2e5fc8dfac29434eb802695be191683bcaa62e055cf85e",
+    "locked_at": "not stated in the saved report",
+    "lock_commit": null,
+    "description": "Saved report evaluates an absolute threshold of 4.5; event recall is the fraction of fault episodes with an alarm in the labeled interval; localization is micro Jaccard over injected frame-group sets."
+  },
+  "baselines": [],
+  "results": [
+    {"scope":"Full saved challenge (80 synthetic frames)","method":"absolute-threshold (threshold=4.5)","metrics":[{"name":"clean frames","value":67,"unit":"frames"},{"name":"fault episodes","value":3,"unit":"episodes"},{"name":"event detection recall","value":1.0,"unit":"fraction"},{"name":"false alarm frames","value":0,"unit":"frames"},{"name":"false alarms per clean frame","value":0.0,"unit":"fraction"},{"name":"group localization accuracy","value":0.9269813000890472,"unit":"micro Jaccard fraction","note":"Computed in the source report over injected frames only: 1,041 localized frame-group pairs / 1,123 union pairs."}]}
+  ],
+  "result_label": "synthetic_example",
+  "interpretation": "The saved deterministic synthetic challenge reports all three generated fault episodes detected, zero false alarms on 67 clean frames, and group localization micro-Jaccard 0.9269813. These values describe only the bundled synthetic challenge and threshold.",
+  "limitations": [
+    "The challenge and all scores are synthetic. Its source explicitly says these results do not establish performance on physical instruments.",
+    "One seed (7), one threshold, and one 80-frame saved challenge are represented; the example includes no comparative baseline report.",
+    "Localization accuracy is calculated only on injected frames, as defined by the source; it is not a measure of physical spatial accuracy."
+  ],
+  "artifacts": [
+    {"path":"artifacts/signal-test-commons/README.md","role":"protocol","description":"Saved project documentation defining the synthetic challenge and metrics.","sha256":"a94d8a66c4ef00c89e2e5fc8dfac29434eb802695be191683bcaa62e055cf85e"},
+    {"path":"artifacts/signal-test-commons/example_report.json","role":"results","description":"Saved Signal Test Commons synthetic example report.","sha256":"ee6189e1911c77bcb7ba55280091ec674c510486456f6f7a213a0909783cb7cd"}
+  ]
+}

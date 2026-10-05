@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "run_id": "multi-quantum-oes-synthetic-example",
+  "project": {
+    "name": "Multi-Quantum OES offline prototype",
+    "version": "not stated in saved output",
+    "source_url": null,
+    "source_note": "Copied from the local saved project output; no public repository URL or commit is asserted by the bundled files."
+  },
+  "evidence_class": "synthetic",
+  "dataset": {
+    "name": "Seeded synthetic 512-channel OES replay",
+    "kind": "synthetic telemetry replay",
+    "description": "Saved report covers 80 frames across stable, noisy, localized-burst and global-shock regimes; project documentation identifies seed 20261002.",
+    "source_url": null
+  },
+  "code": {"version":"not recorded in saved report","commit":null},
+  "seed": 20261002,
+  "protocol": {
+    "name": "oes512-readonly-replay-example-v1",
+    "version": "example preregistration",
+    "sha256": "282bbd778ba3e663cbc29778605e751d95e56c5c8bb35f5dd2e7ca0ae3c1c0a0",
+    "locked_at": "2026-09-30T17:55:00-04:00 (self-declared in saved report)",
+    "lock_commit": null,
+    "description": "Uncalibrated example threshold 0.50; candidate score is 0.45 peak absolute value + 0.35 RMS + 0.20 mean absolute value over each 32-value block; threshold comparison is >=."
+  },
+  "baselines": ["simple_max_abs_per_block_baseline (threshold 0.50)"],
+  "results": [
+    {"scope":"synthetic_stable (20 frames)","method":"candidate_oes512_block_score","metrics":[{"name":"event count","value":0,"unit":"events"},{"name":"false-positive frame rate","value":0.0,"unit":"fraction"}]},
+    {"scope":"synthetic_noisy (20 frames)","method":"candidate_oes512_block_score","metrics":[{"name":"event count","value":0,"unit":"events"},{"name":"false-positive frame rate","value":0.0,"unit":"fraction"}]},
+    {"scope":"synthetic_localized_burst (20 frames)","method":"candidate_oes512_block_score","metrics":[{"name":"event recall","value":1.0,"unit":"fraction"},{"name":"block localization IoU","value":1.0,"unit":"fraction"},{"name":"false-positive frame rate","value":0.0,"unit":"fraction"}]},
+    {"scope":"synthetic_global_shock (20 frames)","method":"candidate_oes512_block_score","metrics":[{"name":"event recall","value":1.0,"unit":"fraction"},{"name":"block localization IoU","value":1.0,"unit":"fraction"},{"name":"false-positive frame rate","value":0.0,"unit":"fraction"}]},
+    {"scope":"synthetic_stable (20 frames)","method":"simple_max_abs_per_block_baseline","metrics":[{"name":"event count","value":0,"unit":"events"},{"name":"false-positive frame rate","value":0.0,"unit":"fraction"}]},
+    {"scope":"synthetic_noisy (20 frames)","method":"simple_max_abs_per_block_baseline","metrics":[{"name":"event count","value":0,"unit":"events"},{"name":"false-positive frame rate","value":0.0,"unit":"fraction"}]},
+    {"scope":"synthetic_localized_burst (20 frames)","method":"simple_max_abs_per_block_baseline","metrics":[{"name":"event recall","value":1.0,"unit":"fraction"},{"name":"block localization IoU","value":1.0,"unit":"fraction"},{"name":"false-positive frame rate","value":0.0,"unit":"fraction"}]},
+    {"scope":"synthetic_global_shock (20 frames)","method":"simple_max_abs_per_block_baseline","metrics":[{"name":"event recall","value":1.0,"unit":"fraction"},{"name":"block localization IoU","value":1.0,"unit":"fraction"},{"name":"false-positive frame rate","value":0.0,"unit":"fraction"}]}
+  ],
+  "result_label": "synthetic_example",
+  "interpretation": "The saved synthetic demonstration reports perfect event recall and localization for the two injected event regimes, with no false-positive frames in the stable/noisy regimes, for both the candidate and the simple max-absolute baseline. These easy, locally generated cases show only how this software fixture behaved; they do not predict real telemetry performance.",
+  "limitations": [
+    "All signals and all reported scores are synthetic; no real telemetry values were imported or inferred.",
+    "The candidate threshold is explicitly uncalibrated and is not a field recommendation.",
+    "The original replay JSONL input is not bundled, so this package verifies the saved report and preregistration bytes, not the replay bytes named inside the report.",
+    "No operational, safety, hardware, medical, or physical-sensor claim is supported."
+  ],
+  "artifacts": [
+    {"path":"artifacts/multi-quantum-oes/example_locked.json","role":"protocol","description":"Saved example preregistration file.","sha256":"282bbd778ba3e663cbc29778605e751d95e56c5c8bb35f5dd2e7ca0ae3c1c0a0"},
+    {"path":"artifacts/multi-quantum-oes/synthetic-report.json","role":"results","description":"Saved synthetic replay report with regime metrics and protocol/input metadata.","sha256":"13a87dcae427113cca5370bf82c2aa4e6b2a6e13861f696d5ecdda017ebaf464"}
+  ]
+}

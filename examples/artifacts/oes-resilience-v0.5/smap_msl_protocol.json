@@ -1,0 +1,70 @@
+{
+  "schema": "oes-resilience/smap-msl-protocol/1",
+  "protocol_id": "smap-msl-blind-v1",
+  "status": "LOCKED before any scoring of the test split",
+  "locked_at": "2026-10-03",
+  "author": "Jean-François Brisson (ORCID 0009-0000-9778-5374)",
+  "data": {
+    "dataset": "NASA SMAP/MSL telemetry anomaly dataset (Hundman et al. 2018, KDD '18, doi:10.1145/3219819.3219845)",
+    "source_urls": [
+      "https://www.kaggle.com/api/v1/datasets/download/patrickfleith/nasa-anomaly-detection-dataset-smap-msl",
+      "https://s3-us-west-2.amazonaws.com/telemanom/data.zip"
+    ],
+    "labels": "labeled_anomalies.csv (identical bytes to https://github.com/khundman/telemanom/blob/master/labeled_anomalies.csv)",
+    "file_manifest": "reports/smap_msl_data.sha256",
+    "file_manifest_sha256": "bf39e5147ebd5fc8471578af35228064d41f09258a31f5de9d404f5e4fe8422d",
+    "not_redistributed": true
+  },
+  "datasets": ["SMAP", "MSL"],
+  "pooling": "SMAP and MSL are analysed and reported separately; never pooled together",
+  "channels": "every channel listed in labeled_anomalies.csv for that spacecraft; files without labels (T-10) are not evaluated; no other exclusion in the primary analysis",
+  "label_handling": "rows sharing (spacecraft, chan_id) are pooled (SMAP P-2 has two rows); overlapping or adjacent inclusive windows are merged into one event",
+  "split": "the dataset's own train/test split per channel (train is anomaly-free and precedes test); test indices are those of labeled_anomalies.csv",
+  "signal": "column 0 (telemetry value) only; command one-hot columns are not used by any method",
+  "standardization": "z = (x - mean(train)) / max(std(train, ddof=1), 1e-9), per channel, identical input for every method",
+  "segments": "train and test are scored as separate segments; recursive states and windows restart at the first sample of each segment",
+  "methods": {
+    "oes32": {"window": 32, "weights": {"maximum": 0.45, "rms": 0.35, "mean_absolute": 0.2}, "rule": "OES32 score over the trailing window z[t-31..t] (partial, mask-aware windows for t < 31)"},
+    "maxabs": {"window": 32, "rule": "max|z| over the same trailing window"},
+    "zscore": {"rule": "|z_t| (simple, pointwise)"},
+    "ewma": {"lam": 0.2, "rule": "e_t = lam z_t + (1 - lam) e_(t-1), e_(-1) = 0; score |e_t| / sqrt(lam / (2 - lam))"},
+    "cusum": {"k": 0.5, "rule": "two-sided tabular CUSUM on z, sums 0 at segment start; score max(S+, S-)"}
+  },
+  "candidate": "oes32",
+  "calibration": {
+    "rule": "oes_resilience.scorecard.calibrate_threshold on the channel's TRAIN scores, unit = one sample: smallest threshold reached by at most floor(target_fp * n_train) train samples",
+    "primary_target_fp": 0.01,
+    "secondary_target_fp": [0.001, 0.0],
+    "alarm_rule": "score >= threshold",
+    "test_labels_used_for_tuning": false
+  },
+  "metrics": {
+    "primary": "pooled event-level F1 per dataset at the primary target: TP = labelled events with at least one alarm sample inside [start, end] (inclusive); FN = events without; FP = maximal runs of consecutive alarm samples that touch no labelled window; precision = TP / (TP + FP), recall = TP / (TP + FN); counts are summed over the dataset's channels",
+    "secondary": [
+      "event-level precision and recall",
+      "point-adjusted precision/recall/F1 (every point of a detected event counts as detected); reported only as secondary because point adjustment is known to inflate scores (Kim et al., AAAI 2022, doi:10.1609/aaai.v36i7.20680)",
+      "detection latency in samples = first alarm inside the window minus window start, detected events only (mean and median)",
+      "false alarms per 1000 test samples = FP runs / test samples * 1000",
+      "test alarm rate on unlabelled samples vs the train calibration target",
+      "mean per-channel event F1; recall by anomaly class (point, contextual)",
+      "per-channel results for every method"
+    ]
+  },
+  "uncertainty": {
+    "bootstrap": "percentile CI over channels (resample channels with replacement within a dataset, recompute pooled counts)",
+    "bootstrap_resamples": 10000,
+    "ci_level": 0.95,
+    "seed": 42,
+    "paired_comparisons": "for each baseline: paired channel bootstrap of the pooled event-F1 difference (oes32 - baseline; same resamples for all methods) and a two-sided Wilcoxon signed-rank test over channels on per-channel event F1 (zero differences dropped; exact if <= 50 non-zero untied differences, else normal approximation with tie and continuity correction)",
+    "multiplicity": "Holm correction over the 8 primary comparisons (4 baselines x 2 datasets) within each target and channel subset"
+  },
+  "success_criteria": {
+    "significance_level": 0.05,
+    "per_comparison": "oes32 better than baseline B on dataset D if the paired-bootstrap 95% CI of the pooled event-F1 difference lies entirely above 0 AND the Holm-adjusted Wilcoxon p < 0.05; oes32 worse if the CI lies entirely below 0 AND Holm p < 0.05; otherwise no significant difference",
+    "headline": "the evaluation supports oes32 on real data only if, at the primary target (0.01) on all channels, oes32 is better than every one of the four baselines on at least one dataset and worse than none on either dataset; anything else is reported as the criterion not being met",
+    "descriptive_only": "latency, false alarms per 1k, point-adjusted F1, secondary targets and the sensitivity subset are reported but cannot by themselves establish success"
+  },
+  "sensitivity": ["excluding channels whose train telemetry is constant (std 0), reported separately; the primary analysis keeps them"],
+  "seed": 42,
+  "changes_after_lock": "any change to this file, the code path or the data after the lock must be disclosed in the results README section and CHANGELOG"
+}

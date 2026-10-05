@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "run_id": "digital-to-wave-v5-synthetic-example",
+  "project": {
+    "name": "Digital-to-Wave Testbench",
+    "version": "v5 exploratory timing-stress run (no release version stated)",
+    "source_url": null,
+    "source_note": "The included output, protocol note, and source file are copied from local saved project artifacts; no public repository URL or commit is asserted."
+  },
+  "evidence_class": "synthetic",
+  "dataset": {
+    "name": "Synthetic dimensionless 32-value software stress vectors",
+    "kind": "synthetic software test; six-vector panel",
+    "description": "Selected scope is POOLED_ALL_VECTORS at an arbitrary +8-sample timing offset (12.5% of a symbol) with synthetic IID Gaussian sample noise SD 0.45.",
+    "source_url": null
+  },
+  "code": {"version":"v5 exploratory timing benchmark source snapshot","commit":null},
+  "seed": 20261007,
+  "protocol": {
+    "name": "v5 integer-sample timing protocol",
+    "version": "5 (exploratory)",
+    "sha256": "8136de81b3bd1c399e093b5751043195393acacabdccd55158631edfa753e5cc",
+    "locked_at": "Conditions were frozen before the full run, according to the source note; it is not described as a formal preregistration.",
+    "lock_commit": null,
+    "description": "Pass requires maximum absolute component error <= 0.25. The protocol uses 2,000 noisy frames per vector and timing offset; the Wilson interval is conditional on the fixed vector panel and synthetic IID noise model."
+  },
+  "baselines": ["oracle_exact_timing (diagnostic upper bound; not a competing decoder)"],
+  "results": [
+    {"scope":"POOLED_ALL_VECTORS; offset +8 samples; noise SD 0.45","method":"existing_nominal_decoder","metrics":[{"name":"frames passing","value":0,"unit":"frames / 12,000"},{"name":"frame pass share","value":0.0,"unit":"fraction","interval_95":[0.0,0.0003200191233674895],"note":"Two-sided 95% Wilson interval, conditional on the fixed vectors and synthetic IID draws."},{"name":"empirical MAE","value":1.8717171352755722,"unit":"dimensionless units"},{"name":"empirical RMSE","value":2.3016991625134846,"unit":"dimensionless units"}]},
+    {"scope":"POOLED_ALL_VECTORS; offset +8 samples; noise SD 0.45","method":"oracle_exact_timing","metrics":[{"name":"frames passing","value":11346,"unit":"frames / 12,000"},{"name":"frame pass share","value":0.9455,"unit":"fraction","interval_95":[0.9412940792677619,0.9494207836933176],"note":"Two-sided 95% Wilson interval, conditional on the fixed vectors and synthetic IID draws."},{"name":"empirical MAE","value":0.06355050461517812,"unit":"dimensionless units"},{"name":"empirical RMSE","value":0.07965381466969458,"unit":"dimensionless units"}]}
+  ],
+  "result_label": "synthetic_example",
+  "interpretation": "In this synthetic software condition only, the existing nominal decoder passed 0 of 12,000 frames at +8 samples, while an oracle given the exact timing passed 11,346. The oracle is a diagnostic upper bound, not a timing-recovery algorithm or a fair competing decoder. This does not establish physical timing or device performance.",
+  "limitations": [
+    "The vectors, waveform, timing offsets, and noise are synthetic and dimensionless; there is no physical channel or device measurement.",
+    "The chosen +8-sample offset is an arbitrary stress value, not a physical operating range.",
+    "The protocol is exploratory, not a formal preregistration or physical validation.",
+    "The uncertainty interval quantifies IID simulation variation conditional on the fixed panel and stated model, not model or physical uncertainty.",
+    "The oracle uses exact timing and is a diagnostic upper bound, not a timing-recovery method."
+  ],
+  "artifacts": [
+    {"path":"artifacts/digital-to-wave/v5-timing-protocol-lock.md","role":"protocol","description":"Saved exploratory protocol lock note.","sha256":"8136de81b3bd1c399e093b5751043195393acacabdccd55158631edfa753e5cc"},
+    {"path":"artifacts/digital-to-wave/robustness-benchmark-v5-timing.json","role":"results","description":"Saved v5 synthetic timing-stress result JSON.","sha256":"10f5643e834c5df2a417b6bcca9d6c43a067156c2a9fcb8533c0af6bb2f7c722"},
+    {"path":"artifacts/digital-to-wave/robustness_benchmark_v5_timing.py","role":"source_code","description":"Saved source referenced by the protocol note; included for consistency checking, not executed by this tool.","sha256":"1bd9500ce3ceadadae25ce6731bc8ea9058adefa2781adf4d16d403b6c383419"}
+  ]
+}

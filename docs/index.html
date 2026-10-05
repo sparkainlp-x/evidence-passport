@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Evidence Passport — sample reports</title>
+<style>
+  body{font-family:system-ui,sans-serif;max-width:42rem;margin:2rem auto;padding:0 1rem;line-height:1.5;color:#1a1a1a}
+  h1{font-size:1.5rem}
+  .warn{border-left:4px solid #b45309;background:#fffbeb;padding:.75rem 1rem;margin:1rem 0}
+  ul{padding-left:1.2rem}
+  code{font-size:.9em}
+</style>
+</head>
+<body>
+<h1>Evidence Passport — sample reports</h1>
+<p>Static HTML evidence passports produced by the offline MVP
+(<a href="https://github.com/sparkainlp-x/evidence-passport">sparkainlp-x/evidence-passport</a>).
+No scripts, no external assets.</p>
+<div class="warn"><strong>Honesty first.</strong> The SMAP/MSL public-dataset sample preserves the upstream finding that the preregistered success criterion was <em>not</em> met. The other three samples are labelled <strong>SYNTHETIC</strong>.</div>
+<ul>
+  <li><a href="oes-resilience-smap-msl-v0.5.html">OES-Resilience SMAP/MSL v0.5</a> — public dataset; criterion not met</li>
+  <li><a href="multi-quantum-oes-synthetic-example.html">Multi-Quantum OES</a> — SYNTHETIC</li>
+  <li><a href="digital-to-wave-v5-synthetic-example.html">Digital-to-Wave v5</a> — SYNTHETIC</li>
+  <li><a href="signal-test-commons-synthetic-example.html">Signal Test Commons</a> — SYNTHETIC</li>
+</ul>
+<p>Rebuild locally with <code>python3 evidence_passport.py build examples/&lt;manifest&gt;.json --out-dir reports</code>.</p>
+</body>
+</html>

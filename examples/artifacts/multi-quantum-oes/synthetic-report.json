@@ -1,0 +1,6747 @@
+{
+  "decision_separation": {
+    "operational_replay_path": "deterministic classical score only",
+    "quantum_lab_path": "isolated toy simulation; not imported, called, or used to rank or flag replay frames"
+  },
+  "detectors": {
+    "candidate_oes512_block_score": {
+      "regimes": {
+        "synthetic_global_shock": {
+          "alarm_frame_count": 3,
+          "block_localization": {
+            "annotated_frame_count": 20,
+            "fn_blocks_across_frames": 0,
+            "fp_blocks_across_frames": 0,
+            "iou": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "tp_blocks_across_frames": 48
+          },
+          "detected_event_count": 1,
+          "detection_latency_ms": {
+            "by_event_id": {
+              "synthetic-shock-001": 0.0
+            },
+            "mean_detected_event_latency_ms": 0.0,
+            "median_detected_event_latency_ms": 0.0
+          },
+          "event_count": 1,
+          "event_recall": 1.0,
+          "false_positive_alarm_episode_count": 0,
+          "false_positive_alarm_episodes_per_10min": 0.0,
+          "false_positive_frame_count": 0,
+          "false_positive_frame_rate": 0.0,
+          "false_positive_frames_per_10min": 0.0,
+          "frame_count": 20,
+          "missed_event_ids": [],
+          "no_event_frame_count": 17,
+          "observed_exposure_seconds": 20.0
+        },
+        "synthetic_localized_burst": {
+          "alarm_frame_count": 3,
+          "block_localization": {
+            "annotated_frame_count": 20,
+            "fn_blocks_across_frames": 0,
+            "fp_blocks_across_frames": 0,
+            "iou": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "tp_blocks_across_frames": 3
+          },
+          "detected_event_count": 1,
+          "detection_latency_ms": {
+            "by_event_id": {
+              "synthetic-burst-001": 0.0
+            },
+            "mean_detected_event_latency_ms": 0.0,
+            "median_detected_event_latency_ms": 0.0
+          },
+          "event_count": 1,
+          "event_recall": 1.0,
+          "false_positive_alarm_episode_count": 0,
+          "false_positive_alarm_episodes_per_10min": 0.0,
+          "false_positive_frame_count": 0,
+          "false_positive_frame_rate": 0.0,
+          "false_positive_frames_per_10min": 0.0,
+          "frame_count": 20,
+          "missed_event_ids": [],
+          "no_event_frame_count": 17,
+          "observed_exposure_seconds": 20.0
+        },
+        "synthetic_noisy": {
+          "alarm_frame_count": 0,
+          "block_localization": {
+            "annotated_frame_count": 20,
+            "fn_blocks_across_frames": 0,
+            "fp_blocks_across_frames": 0,
+            "iou": null,
+            "precision": null,
+            "recall": null,
+            "tp_blocks_across_frames": 0
+          },
+          "detected_event_count": 0,
+          "detection_latency_ms": {
+            "by_event_id": {},
+            "mean_detected_event_latency_ms": null,
+            "median_detected_event_latency_ms": null
+          },
+          "event_count": 0,
+          "event_recall": null,
+          "false_positive_alarm_episode_count": 0,
+          "false_positive_alarm_episodes_per_10min": 0.0,
+          "false_positive_frame_count": 0,
+          "false_positive_frame_rate": 0.0,
+          "false_positive_frames_per_10min": 0.0,
+          "frame_count": 20,
+          "missed_event_ids": [],
+          "no_event_frame_count": 20,
+          "observed_exposure_seconds": 20.0
+        },
+        "synthetic_stable": {
+          "alarm_frame_count": 0,
+          "block_localization": {
+            "annotated_frame_count": 20,
+            "fn_blocks_across_frames": 0,
+            "fp_blocks_across_frames": 0,
+            "iou": null,
+            "precision": null,
+            "recall": null,
+            "tp_blocks_across_frames": 0
+          },
+          "detected_event_count": 0,
+          "detection_latency_ms": {
+            "by_event_id": {},
+            "mean_detected_event_latency_ms": null,
+            "median_detected_event_latency_ms": null
+          },
+          "event_count": 0,
+          "event_recall": null,
+          "false_positive_alarm_episode_count": 0,
+          "false_positive_alarm_episodes_per_10min": 0.0,
+          "false_positive_frame_count": 0,
+          "false_positive_frame_rate": 0.0,
+          "false_positive_frames_per_10min": 0.0,
+          "frame_count": 20,
+          "missed_event_ids": [],
+          "no_event_frame_count": 20,
+          "observed_exposure_seconds": 20.0
+        }
+      }
+    },
+    "incumbent": null,
+    "simple_max_abs_per_block_baseline": {
+      "regimes": {
+        "synthetic_global_shock": {
+          "alarm_frame_count": 3,
+          "block_localization": {
+            "annotated_frame_count": 20,
+            "fn_blocks_across_frames": 0,
+            "fp_blocks_across_frames": 0,
+            "iou": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "tp_blocks_across_frames": 48
+          },
+          "detected_event_count": 1,
+          "detection_latency_ms": {
+            "by_event_id": {
+              "synthetic-shock-001": 0.0
+            },
+            "mean_detected_event_latency_ms": 0.0,
+            "median_detected_event_latency_ms": 0.0
+          },
+          "event_count": 1,
+          "event_recall": 1.0,
+          "false_positive_alarm_episode_count": 0,
+          "false_positive_alarm_episodes_per_10min": 0.0,
+          "false_positive_frame_count": 0,
+          "false_positive_frame_rate": 0.0,
+          "false_positive_frames_per_10min": 0.0,
+          "frame_count": 20,
+          "missed_event_ids": [],
+          "no_event_frame_count": 17,
+          "observed_exposure_seconds": 20.0
+        },
+        "synthetic_localized_burst": {
+          "alarm_frame_count": 3,
+          "block_localization": {
+            "annotated_frame_count": 20,
+            "fn_blocks_across_frames": 0,
+            "fp_blocks_across_frames": 0,
+            "iou": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "tp_blocks_across_frames": 3
+          },
+          "detected_event_count": 1,
+          "detection_latency_ms": {
+            "by_event_id": {
+              "synthetic-burst-001": 0.0
+            },
+            "mean_detected_event_latency_ms": 0.0,
+            "median_detected_event_latency_ms": 0.0
+          },
+          "event_count": 1,
+          "event_recall": 1.0,
+          "false_positive_alarm_episode_count": 0,
+          "false_positive_alarm_episodes_per_10min": 0.0,
+          "false_positive_frame_count": 0,
+          "false_positive_frame_rate": 0.0,
+          "false_positive_frames_per_10min": 0.0,
+          "frame_count": 20,
+          "missed_event_ids": [],
+          "no_event_frame_count": 17,
+          "observed_exposure_seconds": 20.0
+        },
+        "synthetic_noisy": {
+          "alarm_frame_count": 0,
+          "block_localization": {
+            "annotated_frame_count": 20,
+            "fn_blocks_across_frames": 0,
+            "fp_blocks_across_frames": 0,
+            "iou": null,
+            "precision": null,
+            "recall": null,
+            "tp_blocks_across_frames": 0
+          },
+          "detected_event_count": 0,
+          "detection_latency_ms": {
+            "by_event_id": {},
+            "mean_detected_event_latency_ms": null,
+            "median_detected_event_latency_ms": null
+          },
+          "event_count": 0,
+          "event_recall": null,
+          "false_positive_alarm_episode_count": 0,
+          "false_positive_alarm_episodes_per_10min": 0.0,
+          "false_positive_frame_count": 0,
+          "false_positive_frame_rate": 0.0,
+          "false_positive_frames_per_10min": 0.0,
+          "frame_count": 20,
+          "missed_event_ids": [],
+          "no_event_frame_count": 20,
+          "observed_exposure_seconds": 20.0
+        },
+        "synthetic_stable": {
+          "alarm_frame_count": 0,
+          "block_localization": {
+            "annotated_frame_count": 20,
+            "fn_blocks_across_frames": 0,
+            "fp_blocks_across_frames": 0,
+            "iou": null,
+            "precision": null,
+            "recall": null,
+            "tp_blocks_across_frames": 0
+          },
+          "detected_event_count": 0,
+          "detection_latency_ms": {
+            "by_event_id": {},
+            "mean_detected_event_latency_ms": null,
+            "median_detected_event_latency_ms": null
+          },
+          "event_count": 0,
+          "event_recall": null,
+          "false_positive_alarm_episode_count": 0,
+          "false_positive_alarm_episodes_per_10min": 0.0,
+          "false_positive_frame_count": 0,
+          "false_positive_frame_rate": 0.0,
+          "false_positive_frames_per_10min": 0.0,
+          "frame_count": 20,
+          "missed_event_ids": [],
+          "no_event_frame_count": 20,
+          "observed_exposure_seconds": 20.0
+        }
+      }
+    }
+  },
+  "input": {
+    "frame_count": 80,
+    "incumbent_available": false,
+    "regimes_in_first_seen_order": [
+      "synthetic_stable",
+      "synthetic_noisy",
+      "synthetic_localized_burst",
+      "synthetic_global_shock"
+    ],
+    "sha256": "73984523ae4cb235dcf125b54f4fe571fb414c41e21d8125e741dbfc96694dea"
+  },
+  "protocol": {
+    "baseline": "per-block max(abs(channel)) >= baseline_max_abs_threshold",
+    "baseline_max_abs_threshold": 0.5,
+    "candidate_threshold": 0.5,
+    "candidate_threshold_source": "required preregistration; no tuning",
+    "locked_at": "2026-09-30T17:55:00-04:00",
+    "protocol_id": "oes512-readonly-replay-example-v1",
+    "score": {
+      "block_count": 16,
+      "block_size": 32,
+      "channels": 512,
+      "comparison": ">=",
+      "formula": "0.45 * peak(abs(block)) + 0.35 * RMS(block) + 0.20 * mean(abs(block))"
+    },
+    "sha256": "282bbd778ba3e663cbc29778605e751d95e56c5c8bb35f5dd2e7ca0ae3c1c0a0",
+    "threshold_calibration_status": "uncalibrated example threshold; not a field recommendation"
+  },
+  "ranked_frame_evidence": [
+    {
+      "alarm": false,
+      "block_scores": [
+        0.036396603952213086,
+        0.03694147641324725,
+        0.04813484078430605,
+        0.03953065839553994,
+        0.03567335901698311,
+        0.03692901074349342,
+        0.045346962310426404,
+        0.03232663173321557,
+        0.037416910483271726,
+        0.037255646604778855,
+        0.035850843627946945,
+        0.046370031554895046,
+        0.044644799750783976,
+        0.038415618932657804,
+        0.03561450494416812,
+        0.03510290939840194
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 0,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:00.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4518651592156939,
+          "score": 0.04813484078430605
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45362996844510495,
+          "score": 0.046370031554895046
+        },
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4546530376895736,
+          "score": 0.045346962310426404
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45535520024921605,
+          "score": 0.044644799750783976
+        },
+        {
+          "block": 3,
+          "channel_range": [
+            96,
+            128
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.46046934160446007,
+          "score": 0.03953065839553994
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.04691995348234454,
+        0.03804053305415236,
+        0.04114596309385098,
+        0.037066096771120126,
+        0.03500531222989749,
+        0.03732369571664595,
+        0.03934236814617488,
+        0.03629004621398246,
+        0.041582606783697976,
+        0.04248542029029317,
+        0.04062085310669926,
+        0.03800191436611612,
+        0.041404904546169456,
+        0.03170193932678762,
+        0.03317031819623073,
+        0.02833253087117566
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 1,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:01.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45308004651765543,
+          "score": 0.04691995348234454
+        },
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4575145797097068,
+          "score": 0.04248542029029317
+        },
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45841739321630204,
+          "score": 0.041582606783697976
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45859509545383054,
+          "score": 0.041404904546169456
+        },
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.458854036906149,
+          "score": 0.04114596309385098
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.02798738989646038,
+        0.03346369143314155,
+        0.04400233545600034,
+        0.04036965239873602,
+        0.029596653109813693,
+        0.042533497266956294,
+        0.04743591278104509,
+        0.03341714986789908,
+        0.04100916332764416,
+        0.0420156951213742,
+        0.03089899111025168,
+        0.035864415879210625,
+        0.031276393364702164,
+        0.041082035860225345,
+        0.039828142764265446,
+        0.039846972064534796
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 2,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:02.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4525640872189549,
+          "score": 0.04743591278104509
+        },
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45599766454399965,
+          "score": 0.04400233545600034
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4574665027330437,
+          "score": 0.042533497266956294
+        },
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4579843048786258,
+          "score": 0.0420156951213742
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45891796413977465,
+          "score": 0.041082035860225345
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.03992174007381681,
+        0.0403403207184631,
+        0.05509544932717462,
+        0.03941621072959644,
+        0.04027457356074005,
+        0.0450510396765167,
+        0.04325232934929107,
+        0.048599367069576016,
+        0.04083482120482417,
+        0.027681985134369525,
+        0.056196088326287856,
+        0.04618058202965038,
+        0.03668822207000547,
+        0.042294564299419024,
+        0.036513707397833245,
+        0.04198288895023563
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 3,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:03.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.44380391167371214,
+          "score": 0.056196088326287856
+        },
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.44490455067282536,
+          "score": 0.05509544932717462
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.451400632930424,
+          "score": 0.048599367069576016
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45381941797034964,
+          "score": 0.04618058202965038
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4549489603234833,
+          "score": 0.0450510396765167
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.041102692338849035,
+        0.039792978712399556,
+        0.03584338703490614,
+        0.0331468628610371,
+        0.033808762789840345,
+        0.028197773923824766,
+        0.0372370321210725,
+        0.05255597578791659,
+        0.03465805036475737,
+        0.03637850934356187,
+        0.05451888475394184,
+        0.0472892743566775,
+        0.030315536066764067,
+        0.035339841256097085,
+        0.04462185469377809,
+        0.03951753100834253
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 4,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:04.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.44548111524605816,
+          "score": 0.05451888475394184
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4474440242120834,
+          "score": 0.05255597578791659
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4527107256433225,
+          "score": 0.0472892743566775
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4553781453062219,
+          "score": 0.04462185469377809
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45889730766115094,
+          "score": 0.041102692338849035
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.03545070385617504,
+        0.03359121777399278,
+        0.03741582897399667,
+        0.03413686851225844,
+        0.03101869307739713,
+        0.044945946916000505,
+        0.0382931664929857,
+        0.038720206474821536,
+        0.0397326578148361,
+        0.033917066885582284,
+        0.03272392132258774,
+        0.03328765258489533,
+        0.036477695405345005,
+        0.028411368513647214,
+        0.03582769684044509,
+        0.047096705283221546
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 5,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:05.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4529032947167785,
+          "score": 0.047096705283221546
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4550540530839995,
+          "score": 0.044945946916000505
+        },
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4602673421851639,
+          "score": 0.0397326578148361
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.46127979352517845,
+          "score": 0.038720206474821536
+        },
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4617068335070143,
+          "score": 0.0382931664929857
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.03473998185820499,
+        0.039881896101464545,
+        0.039823833495748945,
+        0.03366627688921403,
+        0.03797316728832327,
+        0.03215429899517772,
+        0.037584941904156455,
+        0.03693622329938642,
+        0.033957161991899854,
+        0.03974782689502219,
+        0.03976493537566121,
+        0.04502166113839467,
+        0.04414155973601743,
+        0.042382092633364454,
+        0.039665021432913214,
+        0.03820136874560062
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 6,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:06.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4549783388616053,
+          "score": 0.04502166113839467
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4558584402639826,
+          "score": 0.04414155973601743
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45761790736663555,
+          "score": 0.042382092633364454
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.46011810389853547,
+          "score": 0.039881896101464545
+        },
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4601761665042511,
+          "score": 0.039823833495748945
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.03709453427018967,
+        0.031401316024125145,
+        0.041543207602929344,
+        0.03429809020277326,
+        0.040933744704304914,
+        0.028806654983289732,
+        0.04300207743014325,
+        0.04660641496070761,
+        0.02478538367424977,
+        0.04727704023045365,
+        0.035633528012025406,
+        0.04083735855313845,
+        0.041162235662814725,
+        0.044140829666505094,
+        0.03202618666491224,
+        0.04186525271125242
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 7,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:07.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45272295976954635,
+          "score": 0.04727704023045365
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4533935850392924,
+          "score": 0.04660641496070761
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4558591703334949,
+          "score": 0.044140829666505094
+        },
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4569979225698568,
+          "score": 0.04300207743014325
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4581347472887476,
+          "score": 0.04186525271125242
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.03804699288355263,
+        0.0430008845743156,
+        0.038440402304679724,
+        0.027545849892363004,
+        0.04283073446378922,
+        0.04132972976868154,
+        0.034262955443776534,
+        0.029732068050370312,
+        0.031547263705334005,
+        0.03517248241129434,
+        0.031455307623241585,
+        0.03135538179405897,
+        0.03876064562559716,
+        0.04338950316923115,
+        0.043211894223235056,
+        0.03901366025365537
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 8,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:08.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4566104968307688,
+          "score": 0.04338950316923115
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45678810577676493,
+          "score": 0.043211894223235056
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4569991154256844,
+          "score": 0.0430008845743156
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4571692655362108,
+          "score": 0.04283073446378922
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45867027023131846,
+          "score": 0.04132972976868154
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.03876123754574024,
+        0.04577325530391268,
+        0.044746971885366596,
+        0.047121732356525385,
+        0.035697101108544675,
+        0.03885727481080588,
+        0.03403600270936485,
+        0.03418020301715632,
+        0.03959892354818853,
+        0.04476923609728289,
+        0.046204861812846415,
+        0.03261089894601693,
+        0.045162422359243934,
+        0.037144945325387264,
+        0.04291997344000318,
+        0.040064271129392044
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 9,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:09.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 3,
+          "channel_range": [
+            96,
+            128
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4528782676434746,
+          "score": 0.047121732356525385
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45379513818715356,
+          "score": 0.046204861812846415
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4542267446960873,
+          "score": 0.04577325530391268
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45483757764075605,
+          "score": 0.045162422359243934
+        },
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4552307639027171,
+          "score": 0.04476923609728289
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.041669641999171995,
+        0.04727826497594798,
+        0.03349175999554643,
+        0.04076301344763285,
+        0.04534535343755769,
+        0.04843395524321391,
+        0.03998655280136593,
+        0.04503459541432367,
+        0.034389101656303725,
+        0.0348616947432785,
+        0.03515856062112174,
+        0.0394183588908413,
+        0.028947611781564922,
+        0.04573214930358838,
+        0.037862881666432584,
+        0.02776665146393741
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 10,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:10.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4515660447567861,
+          "score": 0.04843395524321391
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.452721735024052,
+          "score": 0.04727826497594798
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4542678506964116,
+          "score": 0.04573214930358838
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4546546465624423,
+          "score": 0.04534535343755769
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45496540458567636,
+          "score": 0.04503459541432367
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.04114028939754822,
+        0.03686940626016228,
+        0.04368900222037346,
+        0.04492994464263579,
+        0.05542502423885979,
+        0.035263710841174085,
+        0.0367456624839527,
+        0.05650356101541811,
+        0.03241765930224805,
+        0.032122912938314346,
+        0.03225399921288075,
+        0.04151337247610409,
+        0.040948814087645356,
+        0.044320719739522035,
+        0.03493065449077216,
+        0.033199454686579664
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 11,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:11.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4434964389845819,
+          "score": 0.05650356101541811
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4445749757611402,
+          "score": 0.05542502423885979
+        },
+        {
+          "block": 3,
+          "channel_range": [
+            96,
+            128
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4550700553573642,
+          "score": 0.04492994464263579
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.455679280260478,
+          "score": 0.044320719739522035
+        },
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4563109977796265,
+          "score": 0.04368900222037346
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.03434980534092683,
+        0.03598300960473002,
+        0.04144204014049553,
+        0.04170075606624602,
+        0.030825841332376345,
+        0.05192910493247615,
+        0.030973126490880323,
+        0.032762889184208235,
+        0.0408247034201495,
+        0.04921363280047452,
+        0.031264540987374474,
+        0.03290916614832196,
+        0.044830156389807634,
+        0.04367208000557019,
+        0.033631926559162154,
+        0.04860234734273792
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 12,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:12.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.44807089506752384,
+          "score": 0.05192910493247615
+        },
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4507863671995255,
+          "score": 0.04921363280047452
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45139765265726206,
+          "score": 0.04860234734273792
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45516984361019236,
+          "score": 0.044830156389807634
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4563279199944298,
+          "score": 0.04367208000557019
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.0300965677264587,
+        0.044113490627576364,
+        0.05163918808723065,
+        0.0464202622616076,
+        0.044044171349222325,
+        0.04090594503072098,
+        0.04523225881626172,
+        0.031964894179871105,
+        0.044422053572840015,
+        0.047465800011932,
+        0.03868200354124293,
+        0.04443938844929459,
+        0.04180817607812728,
+        0.045177573736451954,
+        0.027932608943327098,
+        0.03732906307853638
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 13,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:13.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.44836081191276933,
+          "score": 0.05163918808723065
+        },
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.452534199988068,
+          "score": 0.047465800011932
+        },
+        {
+          "block": 3,
+          "channel_range": [
+            96,
+            128
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4535797377383924,
+          "score": 0.0464202622616076
+        },
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4547677411837383,
+          "score": 0.04523225881626172
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4548224262635481,
+          "score": 0.045177573736451954
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.038715695906638044,
+        0.02838057325071845,
+        0.044696484348610004,
+        0.045873557923285485,
+        0.04251161327882473,
+        0.04292171064782355,
+        0.03522304960162424,
+        0.03829600607553807,
+        0.029210039966666265,
+        0.03525509819661731,
+        0.04226155523934982,
+        0.04592330809524863,
+        0.039530922406848905,
+        0.03385284071385301,
+        0.0283201561752781,
+        0.04939719072525945
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 14,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:14.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45060280927474056,
+          "score": 0.04939719072525945
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45407669190475136,
+          "score": 0.04592330809524863
+        },
+        {
+          "block": 3,
+          "channel_range": [
+            96,
+            128
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4541264420767145,
+          "score": 0.045873557923285485
+        },
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45530351565139,
+          "score": 0.044696484348610004
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4570782893521764,
+          "score": 0.04292171064782355
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.03645215355615367,
+        0.03188754986424305,
+        0.03654994025815997,
+        0.03324521081847791,
+        0.04273607436542096,
+        0.0508461128658194,
+        0.04112592955928001,
+        0.04896162697453115,
+        0.0384862991273726,
+        0.042766702477783726,
+        0.03727274748811051,
+        0.036320542643191456,
+        0.032411943869194264,
+        0.029542706086506526,
+        0.03420313584711759,
+        0.04967073265598338
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 15,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:15.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4491538871341806,
+          "score": 0.0508461128658194
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4503292673440166,
+          "score": 0.04967073265598338
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45103837302546884,
+          "score": 0.04896162697453115
+        },
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45723329752221625,
+          "score": 0.042766702477783726
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.457263925634579,
+          "score": 0.04273607436542096
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.04108872252360528,
+        0.050511279967698004,
+        0.057972012293347294,
+        0.02989018703215921,
+        0.0358779676801413,
+        0.043525734695009734,
+        0.03650490635095301,
+        0.0402565074508079,
+        0.02923900654344847,
+        0.042355249337579365,
+        0.036366608392129615,
+        0.03376827698963219,
+        0.0515299770360941,
+        0.041772253419968715,
+        0.044977297858245224,
+        0.03599290763607479
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 16,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:16.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4420279877066527,
+          "score": 0.057972012293347294
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4484700229639059,
+          "score": 0.0515299770360941
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.449488720032302,
+          "score": 0.050511279967698004
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4550227021417548,
+          "score": 0.044977297858245224
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45647426530499025,
+          "score": 0.043525734695009734
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.0431409210431508,
+        0.042240676258497645,
+        0.0298309905831624,
+        0.039577191679712985,
+        0.04280208484349254,
+        0.033748879380509314,
+        0.04448923960513034,
+        0.037921211488498544,
+        0.03646504481497604,
+        0.030740820490713895,
+        0.035006534013508894,
+        0.048920494869410455,
+        0.038832460418101095,
+        0.03443109041195374,
+        0.038524487189995946,
+        0.03963355730877067
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 17,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:17.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45107950513058953,
+          "score": 0.048920494869410455
+        },
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45551076039486965,
+          "score": 0.04448923960513034
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4568590789568492,
+          "score": 0.0431409210431508
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4571979151565075,
+          "score": 0.04280208484349254
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45775932374150236,
+          "score": 0.042240676258497645
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.03311969109260039,
+        0.03867479126601853,
+        0.03967887817302648,
+        0.036393209521930245,
+        0.02947916121326944,
+        0.038679311447448496,
+        0.03599267266403721,
+        0.044501069249198645,
+        0.03739030262205981,
+        0.05247376920176711,
+        0.037634085123342105,
+        0.02338472438455289,
+        0.033714234904331696,
+        0.03937156331895864,
+        0.03971752363270796,
+        0.030544963272660576
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 18,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:18.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4475262307982329,
+          "score": 0.05247376920176711
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45549893075080133,
+          "score": 0.044501069249198645
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.460282476367292,
+          "score": 0.03971752363270796
+        },
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4603211218269735,
+          "score": 0.03967887817302648
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.46062843668104136,
+          "score": 0.03937156331895864
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.04639940188597744,
+        0.021869024634419237,
+        0.03579033311021695,
+        0.03116474419459685,
+        0.04580029817064521,
+        0.0335643198030834,
+        0.035056794935414796,
+        0.05106906476913994,
+        0.055529918178074365,
+        0.033434377144805086,
+        0.040246112724187336,
+        0.03420941657337114,
+        0.045878044189712724,
+        0.045598731504162826,
+        0.04588814304321879,
+        0.04003659715205992
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 19,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_stable",
+      "timestamp": "2026-10-02T00:00:19.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.44447008182192566,
+          "score": 0.055529918178074365
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4489309352308601,
+          "score": 0.05106906476913994
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45360059811402254,
+          "score": 0.04639940188597744
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4541118569567812,
+          "score": 0.04588814304321879
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45412195581028725,
+          "score": 0.045878044189712724
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.1256128928663957,
+        0.17872299719301543,
+        0.17156355907361184,
+        0.191712821686513,
+        0.1662727007853106,
+        0.2243321139653303,
+        0.15905872977848334,
+        0.16050862050968304,
+        0.20310249687100906,
+        0.19721776806007862,
+        0.19514394146825842,
+        0.20627785373050425,
+        0.19840043874675986,
+        0.16176728277065242,
+        0.1716246375953612,
+        0.1780138922058773
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 20,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:20.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.27566788603466974,
+          "score": 0.2243321139653303
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2937221462694958,
+          "score": 0.20627785373050425
+        },
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.29689750312899094,
+          "score": 0.20310249687100906
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.30159956125324017,
+          "score": 0.19840043874675986
+        },
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.3027822319399214,
+          "score": 0.19721776806007862
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.19854385664662277,
+        0.17975516446784853,
+        0.18617109674325155,
+        0.18366506497319507,
+        0.22745325304226607,
+        0.16974816403699064,
+        0.16824933128285754,
+        0.16338019831959624,
+        0.14932373231265494,
+        0.15133562120036662,
+        0.2118463577593362,
+        0.20769951834192385,
+        0.23260982490054702,
+        0.1653490993180824,
+        0.16870806223678164,
+        0.1648930792269777
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 21,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:21.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.26739017509945295,
+          "score": 0.23260982490054702
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.27254674695773395,
+          "score": 0.22745325304226607
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2881536422406638,
+          "score": 0.2118463577593362
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.29230048165807615,
+          "score": 0.20769951834192385
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.3014561433533772,
+          "score": 0.19854385664662277
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.2530624844818272,
+        0.20348805295535363,
+        0.17627359407591764,
+        0.17351652832368328,
+        0.22421244066275012,
+        0.17056315232607777,
+        0.12711287956304912,
+        0.22388942135767048,
+        0.17633232127628212,
+        0.16612847056970328,
+        0.15830831097261805,
+        0.16931404746118894,
+        0.14894526007209083,
+        0.14993167386668219,
+        0.18345967362048823,
+        0.16240517340868843
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 22,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:22.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.24693751551817278,
+          "score": 0.2530624844818272
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.27578755933724985,
+          "score": 0.22421244066275012
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2761105786423295,
+          "score": 0.22388942135767048
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.29651194704464634,
+          "score": 0.20348805295535363
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.3165403263795118,
+          "score": 0.18345967362048823
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.21897371596471965,
+        0.1806106874739003,
+        0.1531235246488096,
+        0.1965929638844974,
+        0.2188333492157418,
+        0.17136411318059316,
+        0.2550444578436171,
+        0.2028089072858225,
+        0.14699774675572921,
+        0.14533345489722566,
+        0.1696437663573093,
+        0.22574091255590423,
+        0.19266052830261063,
+        0.20341148021440886,
+        0.18945527076178323,
+        0.22162848083203557
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 23,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:23.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.24495554215638288,
+          "score": 0.2550444578436171
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2742590874440958,
+          "score": 0.22574091255590423
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.27837151916796443,
+          "score": 0.22162848083203557
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.28102628403528035,
+          "score": 0.21897371596471965
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2811666507842582,
+          "score": 0.2188333492157418
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.1544222582898656,
+        0.2276278765025696,
+        0.25197439931916765,
+        0.1670317755685899,
+        0.15364263583910626,
+        0.1930518049299603,
+        0.14701400451119465,
+        0.1742591323500571,
+        0.19055585450511417,
+        0.21211827892814278,
+        0.23003854977179905,
+        0.22315776651573213,
+        0.2484759575737389,
+        0.15359366876882058,
+        0.1552334595637951,
+        0.16082952372033035
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 24,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:24.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.24802560068083235,
+          "score": 0.25197439931916765
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.25152404242626114,
+          "score": 0.2484759575737389
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.26996145022820095,
+          "score": 0.23003854977179905
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2723721234974304,
+          "score": 0.2276278765025696
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.27684223348426784,
+          "score": 0.22315776651573213
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.17357524762815485,
+        0.15895915375031344,
+        0.14061674108512928,
+        0.19680755459831273,
+        0.1755009458626761,
+        0.16424044595516826,
+        0.15064373460548344,
+        0.1561782564165369,
+        0.1633737965980669,
+        0.21280930239774554,
+        0.21210740164244943,
+        0.1746879844941316,
+        0.1739551236340293,
+        0.18247445438778978,
+        0.1640800712221986,
+        0.14547797630089157
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 25,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:25.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.28719069760225446,
+          "score": 0.21280930239774554
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.28789259835755054,
+          "score": 0.21210740164244943
+        },
+        {
+          "block": 3,
+          "channel_range": [
+            96,
+            128
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.30319244540168727,
+          "score": 0.19680755459831273
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.31752554561221025,
+          "score": 0.18247445438778978
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.32449905413732394,
+          "score": 0.1755009458626761
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.2088908003559355,
+        0.1530365099308305,
+        0.15852776299088092,
+        0.21230732554704415,
+        0.23694056258200358,
+        0.18923987806405657,
+        0.13768624545144947,
+        0.24734967405531286,
+        0.19459736165573574,
+        0.1403805437600606,
+        0.18713500039341766,
+        0.1530149907059973,
+        0.13229667279114374,
+        0.17297273570486305,
+        0.17272904873238426,
+        0.18683530269633875
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 26,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:26.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.25265032594468717,
+          "score": 0.24734967405531286
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2630594374179964,
+          "score": 0.23694056258200358
+        },
+        {
+          "block": 3,
+          "channel_range": [
+            96,
+            128
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2876926744529559,
+          "score": 0.21230732554704415
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2911091996440645,
+          "score": 0.2088908003559355
+        },
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.3054026383442643,
+          "score": 0.19459736165573574
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.1679773102350605,
+        0.15296993959698996,
+        0.14780672166899284,
+        0.17636755336497784,
+        0.14936055938989728,
+        0.25630568830386213,
+        0.2376142065783557,
+        0.1498058496125319,
+        0.12361851479553998,
+        0.1813596233503897,
+        0.1916642082569438,
+        0.17826359239905432,
+        0.21618098459502047,
+        0.11781411661007395,
+        0.2059163507689613,
+        0.1856634921045294
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 27,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:27.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.24369431169613787,
+          "score": 0.25630568830386213
+        },
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2623857934216443,
+          "score": 0.2376142065783557
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.28381901540497956,
+          "score": 0.21618098459502047
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2940836492310387,
+          "score": 0.2059163507689613
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.3083357917430562,
+          "score": 0.1916642082569438
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.21833115085748334,
+        0.17561598132837544,
+        0.19525508981378847,
+        0.17552360221592375,
+        0.13882394053898978,
+        0.16237868074502032,
+        0.21672251198783996,
+        0.18044030648710313,
+        0.19550209156768583,
+        0.16324463585076882,
+        0.16037001070462384,
+        0.17509411297960092,
+        0.19676679335268624,
+        0.19733951689138948,
+        0.24925790843047052,
+        0.1875855131537819
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 28,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:28.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2507420915695295,
+          "score": 0.24925790843047052
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.28166884914251666,
+          "score": 0.21833115085748334
+        },
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.28327748801216,
+          "score": 0.21672251198783996
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.3026604831086105,
+          "score": 0.19733951689138948
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.3032332066473138,
+          "score": 0.19676679335268624
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.16440757291554142,
+        0.16882405912072404,
+        0.18549819335520787,
+        0.17709161670994444,
+        0.21299715342368586,
+        0.1961597616741526,
+        0.15847506600907493,
+        0.1705337399444008,
+        0.23243786874493833,
+        0.19179365852149724,
+        0.12651392492460914,
+        0.22936168304953136,
+        0.22202819368182658,
+        0.17185745140204467,
+        0.1637908165527343,
+        0.21679925598762348
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 29,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:29.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2675621312550617,
+          "score": 0.23243786874493833
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.27063831695046864,
+          "score": 0.22936168304953136
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2779718063181734,
+          "score": 0.22202819368182658
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2832007440123765,
+          "score": 0.21679925598762348
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.28700284657631414,
+          "score": 0.21299715342368586
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.17167876383544256,
+        0.22616358495148803,
+        0.2307188636645982,
+        0.18616246169090164,
+        0.20096885207543824,
+        0.19962993843011087,
+        0.16854017112426564,
+        0.1787394324127424,
+        0.18450158725444665,
+        0.18213687590856525,
+        0.19687581831597314,
+        0.21202444088536518,
+        0.2181608035470389,
+        0.21730004422376334,
+        0.20186345267590186,
+        0.19750814907550673
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 30,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:30.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2692811363354018,
+          "score": 0.2307188636645982
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.27383641504851197,
+          "score": 0.22616358495148803
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.28183919645296107,
+          "score": 0.2181608035470389
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.28269995577623663,
+          "score": 0.21730004422376334
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2879755591146348,
+          "score": 0.21202444088536518
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.1870087190680355,
+        0.18096026432328532,
+        0.21629606048891592,
+        0.15286087361587566,
+        0.23130514806483868,
+        0.16614641570215619,
+        0.21449871144931743,
+        0.18011971228715393,
+        0.29022565933994326,
+        0.2003005189007136,
+        0.17459085408840225,
+        0.2279814426412836,
+        0.1924627376301416,
+        0.23397562223811458,
+        0.28019186982847644,
+        0.24338936645662734
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 31,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:31.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.20977434066005674,
+          "score": 0.29022565933994326
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.21980813017152356,
+          "score": 0.28019186982847644
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.25661063354337266,
+          "score": 0.24338936645662734
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2660243777618854,
+          "score": 0.23397562223811458
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2686948519351613,
+          "score": 0.23130514806483868
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.28690122704451615,
+        0.19822700775164026,
+        0.1635509147135061,
+        0.18535418663252667,
+        0.18356019612922436,
+        0.27075619118464817,
+        0.20282842159230807,
+        0.20049624300433183,
+        0.2055497269406737,
+        0.22789059928676378,
+        0.2611355883558876,
+        0.1605445238075611,
+        0.2271564534200076,
+        0.2062855633132017,
+        0.18906219694550133,
+        0.18509029668143592
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 32,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:32.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.21309877295548385,
+          "score": 0.28690122704451615
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.22924380881535183,
+          "score": 0.27075619118464817
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.23886441164411237,
+          "score": 0.2611355883558876
+        },
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2721094007132362,
+          "score": 0.22789059928676378
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.27284354657999244,
+          "score": 0.2271564534200076
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.2085095953033002,
+        0.19354986520019224,
+        0.1405039718976552,
+        0.16604225104117043,
+        0.14564703704695245,
+        0.17496146453132985,
+        0.17458556527843433,
+        0.19468736620034263,
+        0.20725018404093234,
+        0.1578873191938732,
+        0.2142050141650371,
+        0.18371631454144655,
+        0.17226635777714494,
+        0.20479642410966564,
+        0.1937411032193359,
+        0.20995954443038495
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 33,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:33.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2857949858349629,
+          "score": 0.2142050141650371
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.29004045556961505,
+          "score": 0.20995954443038495
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2914904046966998,
+          "score": 0.2085095953033002
+        },
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2927498159590677,
+          "score": 0.20725018404093234
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.29520357589033436,
+          "score": 0.20479642410966564
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.1650957795831241,
+        0.2144778682238401,
+        0.2630346740707904,
+        0.1428493377579472,
+        0.1948392685942672,
+        0.24230094247285694,
+        0.165624399955456,
+        0.21032138244855075,
+        0.18041522665193585,
+        0.20088292569189845,
+        0.22410743030292304,
+        0.2005138151284437,
+        0.16500666323561844,
+        0.21718109242367906,
+        0.1840889092922725,
+        0.1642615417435057
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 34,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:34.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2369653259292096,
+          "score": 0.2630346740707904
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.25769905752714306,
+          "score": 0.24230094247285694
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.275892569697077,
+          "score": 0.22410743030292304
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.28281890757632094,
+          "score": 0.21718109242367906
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2855221317761599,
+          "score": 0.2144778682238401
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.2469174085232552,
+        0.1802452588315314,
+        0.2135101235463182,
+        0.21768506411526095,
+        0.16883045044555628,
+        0.16291057917588161,
+        0.14068754026644845,
+        0.22904869921890475,
+        0.15956839374378853,
+        0.13421921289805436,
+        0.17886407711740399,
+        0.15706300070931828,
+        0.20922551487729568,
+        0.15626863003016064,
+        0.27346083821912276,
+        0.2477622364359531
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 35,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:35.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.22653916178087724,
+          "score": 0.27346083821912276
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2522377635640469,
+          "score": 0.2477622364359531
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.25308259147674483,
+          "score": 0.2469174085232552
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.27095130078109525,
+          "score": 0.22904869921890475
+        },
+        {
+          "block": 3,
+          "channel_range": [
+            96,
+            128
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.28231493588473905,
+          "score": 0.21768506411526095
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.1727151367853139,
+        0.15900131342731094,
+        0.16487737576179815,
+        0.15439627959008767,
+        0.16289536519231818,
+        0.17945799634379833,
+        0.18280590513445744,
+        0.22426535148721252,
+        0.1902759129861724,
+        0.17945300936671507,
+        0.2141136663230489,
+        0.19325051468877885,
+        0.22611098437885374,
+        0.1426174735234052,
+        0.18703705980032337,
+        0.1343418891422697
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 36,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:36.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.27388901562114626,
+          "score": 0.22611098437885374
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2757346485127875,
+          "score": 0.22426535148721252
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2858863336769511,
+          "score": 0.2141136663230489
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.30674948531122115,
+          "score": 0.19325051468877885
+        },
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.3097240870138276,
+          "score": 0.1902759129861724
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.13238790693216831,
+        0.21588497498653406,
+        0.20458455781652823,
+        0.19232861946657548,
+        0.16043418719486227,
+        0.15485053254301975,
+        0.22146275121458747,
+        0.17854941887106984,
+        0.14988551926950527,
+        0.2358703513105918,
+        0.16487021285934017,
+        0.15380583368725328,
+        0.20405978188444024,
+        0.18535027982050348,
+        0.20604723141548967,
+        0.12512035039009667
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 37,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:37.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2641296486894082,
+          "score": 0.2358703513105918
+        },
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.27853724878541253,
+          "score": 0.22146275121458747
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.28411502501346597,
+          "score": 0.21588497498653406
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.29395276858451036,
+          "score": 0.20604723141548967
+        },
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.29541544218347177,
+          "score": 0.20458455781652823
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.1835065173692652,
+        0.2285120765461001,
+        0.17592031617396675,
+        0.16476881683620692,
+        0.1400558137485221,
+        0.19945456260848823,
+        0.18524970575819538,
+        0.2088982990985163,
+        0.20229726249738986,
+        0.2223883478674363,
+        0.22697403764983123,
+        0.17596347542412646,
+        0.19402034514976563,
+        0.18080905860985608,
+        0.17848416714245702,
+        0.191870412119484
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 38,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:38.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.27148792345389994,
+          "score": 0.2285120765461001
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.27302596235016874,
+          "score": 0.22697403764983123
+        },
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.27761165213256367,
+          "score": 0.2223883478674363
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2911017009014837,
+          "score": 0.2088982990985163
+        },
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2977027375026101,
+          "score": 0.20229726249738986
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.18845233376286968,
+        0.16691063979155346,
+        0.19371899232074805,
+        0.13950539085471333,
+        0.15555150707510743,
+        0.17986549006441288,
+        0.21810498358389033,
+        0.22601962260826117,
+        0.17049713094698352,
+        0.22746967684401748,
+        0.16288305650676788,
+        0.16436157357946224,
+        0.20279667453352393,
+        0.17510245076173375,
+        0.15464232535770395,
+        0.19967369154872808
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 39,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_noisy",
+      "timestamp": "2026-10-02T00:00:39.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2725303231559825,
+          "score": 0.22746967684401748
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.27398037739173886,
+          "score": 0.22601962260826117
+        },
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2818950164161097,
+          "score": 0.21810498358389033
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.2972033254664761,
+          "score": 0.20279667453352393
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.30032630845127195,
+          "score": 0.19967369154872808
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.042876808184709465,
+        0.041035596033767385,
+        0.051100013984711014,
+        0.041148167826444385,
+        0.03940688460765804,
+        0.04101492383554202,
+        0.040389329202921716,
+        0.030353123275737897,
+        0.03714514191959727,
+        0.033944741136506106,
+        0.044013962630306804,
+        0.033092835712337294,
+        0.04688988676087301,
+        0.038236484995909654,
+        0.02796766738015508,
+        0.03723580602036508
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 40,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:40.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.44889998601528897,
+          "score": 0.051100013984711014
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.453110113239127,
+          "score": 0.04688988676087301
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4559860373696932,
+          "score": 0.044013962630306804
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45712319181529054,
+          "score": 0.042876808184709465
+        },
+        {
+          "block": 3,
+          "channel_range": [
+            96,
+            128
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45885183217355563,
+          "score": 0.041148167826444385
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.03331045890118404,
+        0.03351634280188795,
+        0.049684483183560293,
+        0.037492128381929134,
+        0.041263511572442756,
+        0.043320299722524165,
+        0.03940450616209301,
+        0.04035093390630484,
+        0.03019185507201594,
+        0.03201725124411229,
+        0.046961491423203564,
+        0.04015588522513256,
+        0.03850273136800438,
+        0.03730538870159375,
+        0.044286238294676185,
+        0.03399008173120769
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 41,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:41.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4503155168164397,
+          "score": 0.049684483183560293
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45303850857679645,
+          "score": 0.046961491423203564
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4557137617053238,
+          "score": 0.044286238294676185
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45667970027747584,
+          "score": 0.043320299722524165
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45873648842755727,
+          "score": 0.041263511572442756
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.031340272607619284,
+        0.037238246563357794,
+        0.040531434046096715,
+        0.04224475040533337,
+        0.03480924155419904,
+        0.041489431177461525,
+        0.05456725390769191,
+        0.03762638112541468,
+        0.04358786927843663,
+        0.03554641192743838,
+        0.05237705808808673,
+        0.05073942410863374,
+        0.039988076255138616,
+        0.03402841083333359,
+        0.04513105541697567,
+        0.04208307023099207
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 42,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:42.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4454327460923081,
+          "score": 0.05456725390769191
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.44762294191191326,
+          "score": 0.05237705808808673
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.44926057589136625,
+          "score": 0.05073942410863374
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45486894458302435,
+          "score": 0.04513105541697567
+        },
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4564121307215634,
+          "score": 0.04358786927843663
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.03776850054420492,
+        0.03709139208449005,
+        0.03725828963178122,
+        0.0353342190573526,
+        0.05272463626462879,
+        0.030968542257296876,
+        0.035817281633667014,
+        0.04186309160671359,
+        0.04087245779593479,
+        0.03749597506357124,
+        0.037249460206062415,
+        0.041337871267379256,
+        0.03992784929961572,
+        0.046181366059297076,
+        0.04625876764990333,
+        0.04259293867468495
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 43,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:43.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4472753637353712,
+          "score": 0.05272463626462879
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45374123235009667,
+          "score": 0.04625876764990333
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45381863394070293,
+          "score": 0.046181366059297076
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45740706132531506,
+          "score": 0.04259293867468495
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4581369083932864,
+          "score": 0.04186309160671359
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.04954298856059302,
+        0.037084890420544976,
+        0.040582753801825903,
+        0.0389513356043398,
+        0.049118549753151844,
+        0.04285974452201802,
+        0.04812578256717764,
+        0.034013887403515235,
+        0.03996733950515118,
+        0.04266896061964088,
+        0.038290508336092266,
+        0.030170755171624604,
+        0.04040394592633616,
+        0.038103761115354386,
+        0.03453986702776812,
+        0.04641047931657465
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 44,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:44.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.450457011439407,
+          "score": 0.04954298856059302
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45088145024684817,
+          "score": 0.049118549753151844
+        },
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45187421743282236,
+          "score": 0.04812578256717764
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45358952068342534,
+          "score": 0.04641047931657465
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.457140255477982,
+          "score": 0.04285974452201802
+        }
+      ]
+    },
+    {
+      "alarm": true,
+      "block_scores": [
+        0.0415189993375777,
+        0.040622641129541684,
+        0.036283070353247154,
+        0.03797314516020169,
+        0.041639747378050755,
+        0.8786346865003802,
+        0.03157824424705613,
+        0.04824204752340587,
+        0.03479132327682027,
+        0.03855327093687522,
+        0.038671366290237014,
+        0.041254610834285804,
+        0.03459578088250399,
+        0.049122160935131776,
+        0.04020590679026385,
+        0.050732650653009005
+      ],
+      "event_id": "synthetic-burst-001",
+      "event_label": "localized_burst",
+      "flagged_blocks": [
+        5
+      ],
+      "frame_index": 45,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:45.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": true,
+          "margin_over_threshold": 0.37863468650038024,
+          "score": 0.8786346865003802
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.449267349346991,
+          "score": 0.050732650653009005
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4508778390648682,
+          "score": 0.049122160935131776
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4517579524765941,
+          "score": 0.04824204752340587
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45836025262194924,
+          "score": 0.041639747378050755
+        }
+      ]
+    },
+    {
+      "alarm": true,
+      "block_scores": [
+        0.0328225677612935,
+        0.04478954553354976,
+        0.04097398688762821,
+        0.029760757779307104,
+        0.03748222188204385,
+        0.8808778124293738,
+        0.03627999328378915,
+        0.040158552924806,
+        0.03942588254994879,
+        0.03923674303476005,
+        0.030925690056134977,
+        0.04183675327338685,
+        0.029452880031392816,
+        0.03292541616097181,
+        0.04064487236875786,
+        0.0307212076343209
+      ],
+      "event_id": "synthetic-burst-001",
+      "event_label": "localized_burst",
+      "flagged_blocks": [
+        5
+      ],
+      "frame_index": 46,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:46.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": true,
+          "margin_over_threshold": 0.3808778124293738,
+          "score": 0.8808778124293738
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45521045446645025,
+          "score": 0.04478954553354976
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4581632467266131,
+          "score": 0.04183675327338685
+        },
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4590260131123718,
+          "score": 0.04097398688762821
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45935512763124214,
+          "score": 0.04064487236875786
+        }
+      ]
+    },
+    {
+      "alarm": true,
+      "block_scores": [
+        0.036606890986237386,
+        0.05049168044470753,
+        0.041728389023790044,
+        0.031508536451008595,
+        0.03597764141165376,
+        0.8708153048155504,
+        0.0412923708570389,
+        0.04653510687955668,
+        0.04442486132933155,
+        0.03610980231327845,
+        0.04014794830488824,
+        0.04044717236752076,
+        0.04521695407129741,
+        0.04069485445224622,
+        0.03629680586523892,
+        0.036263469383536945
+      ],
+      "event_id": "synthetic-burst-001",
+      "event_label": "localized_burst",
+      "flagged_blocks": [
+        5
+      ],
+      "frame_index": 47,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:47.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": true,
+          "margin_over_threshold": 0.37081530481555036,
+          "score": 0.8708153048155504
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.44950831955529247,
+          "score": 0.05049168044470753
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4534648931204433,
+          "score": 0.04653510687955668
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4547830459287026,
+          "score": 0.04521695407129741
+        },
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45557513867066846,
+          "score": 0.04442486132933155
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.04327622328875964,
+        0.03739806811224172,
+        0.03034958538345972,
+        0.03647544347268661,
+        0.03606106543351235,
+        0.0346719107940681,
+        0.032257970661459565,
+        0.04066294233088599,
+        0.05310635428859836,
+        0.044437602132603275,
+        0.038062892360177625,
+        0.04278122786144333,
+        0.045501154521362115,
+        0.035797862785631074,
+        0.04221907013937252,
+        0.051422262233317126
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 48,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:48.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.44689364571140167,
+          "score": 0.05310635428859836
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.44857773776668286,
+          "score": 0.051422262233317126
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4544988454786379,
+          "score": 0.045501154521362115
+        },
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4555623978673967,
+          "score": 0.044437602132603275
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45672377671124037,
+          "score": 0.04327622328875964
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.04091921946229463,
+        0.03398743728027097,
+        0.03645228318522389,
+        0.03842430332242057,
+        0.050610643317525045,
+        0.04076565357593896,
+        0.029512041111530173,
+        0.0455160575860614,
+        0.04558424795002007,
+        0.03469489216915856,
+        0.03558545832993711,
+        0.040125024737500146,
+        0.036707943695596275,
+        0.043081525680980975,
+        0.04193402002898419,
+        0.042090910685315015
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 49,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:49.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4493893566824749,
+          "score": 0.050610643317525045
+        },
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4544157520499799,
+          "score": 0.04558424795002007
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4544839424139386,
+          "score": 0.0455160575860614
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.456918474319019,
+          "score": 0.043081525680980975
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.457909089314685,
+          "score": 0.042090910685315015
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.044837729927813055,
+        0.040059052645360735,
+        0.03572674901084302,
+        0.0354490559711798,
+        0.039941031749209696,
+        0.04264102127874808,
+        0.04778255734922124,
+        0.055078564075336865,
+        0.034164361285230344,
+        0.04256886942311355,
+        0.043576594751323375,
+        0.033238941834850946,
+        0.04487108977079208,
+        0.03476963518470868,
+        0.033139379796594974,
+        0.03347674983438242
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 50,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:50.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.44492143592466316,
+          "score": 0.055078564075336865
+        },
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4522174426507788,
+          "score": 0.04778255734922124
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45512891022920793,
+          "score": 0.04487108977079208
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45516227007218696,
+          "score": 0.044837729927813055
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45642340524867664,
+          "score": 0.043576594751323375
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.04182675239917839,
+        0.03695134323699165,
+        0.043812314229156726,
+        0.039662373257290454,
+        0.03966614243213696,
+        0.03831289222017023,
+        0.03665185820769398,
+        0.0341788684504828,
+        0.03960296620330257,
+        0.040482399856473235,
+        0.04884371571133292,
+        0.02726030295561892,
+        0.03489532212075875,
+        0.035966973534187034,
+        0.03314990416080604,
+        0.04226104722385445
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 51,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:51.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45115628428866705,
+          "score": 0.04884371571133292
+        },
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4561876857708433,
+          "score": 0.043812314229156726
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45773895277614557,
+          "score": 0.04226104722385445
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4581732476008216,
+          "score": 0.04182675239917839
+        },
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45951760014352677,
+          "score": 0.040482399856473235
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.04521585954576574,
+        0.04604190537665336,
+        0.03388387677950782,
+        0.03548391886840682,
+        0.03894418650456978,
+        0.0319275782338808,
+        0.03465810789543194,
+        0.03725090785455914,
+        0.03681580591526757,
+        0.03841250764322065,
+        0.04406603779161069,
+        0.03867856115707718,
+        0.036551533147709404,
+        0.0475520980008156,
+        0.042482262197756165,
+        0.04023009421612907
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 52,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:52.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4524479019991844,
+          "score": 0.0475520980008156
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45395809462334663,
+          "score": 0.04604190537665336
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45478414045423426,
+          "score": 0.04521585954576574
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45593396220838933,
+          "score": 0.04406603779161069
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4575177378022438,
+          "score": 0.042482262197756165
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.033574629949225256,
+        0.03775910289250752,
+        0.03620360241035296,
+        0.033298536345198394,
+        0.036894226515763684,
+        0.040478003175260645,
+        0.03560462105456426,
+        0.03213518730613737,
+        0.03809608393598322,
+        0.036824826699808376,
+        0.04258257714184165,
+        0.02987929411408647,
+        0.03703671273054411,
+        0.03955435658937278,
+        0.05664668731293805,
+        0.03944359842543017
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 53,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:53.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.44335331268706196,
+          "score": 0.05664668731293805
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45741742285815834,
+          "score": 0.04258257714184165
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4595219968247394,
+          "score": 0.040478003175260645
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4604456434106272,
+          "score": 0.03955435658937278
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.46055640157456984,
+          "score": 0.03944359842543017
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.05011272309163338,
+        0.039540869162530724,
+        0.04134652416252852,
+        0.029221748782117283,
+        0.03687385452695416,
+        0.02872896953713881,
+        0.04337240806405288,
+        0.03448202590921583,
+        0.036801858844422275,
+        0.041689020557917796,
+        0.0419319489479052,
+        0.030361659674788752,
+        0.04416434243601123,
+        0.03807754393672919,
+        0.0425624627135036,
+        0.04052832692637755
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 54,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:54.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4498872769083666,
+          "score": 0.05011272309163338
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45583565756398875,
+          "score": 0.04416434243601123
+        },
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4566275919359471,
+          "score": 0.04337240806405288
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4574375372864964,
+          "score": 0.0425624627135036
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4580680510520948,
+          "score": 0.0419319489479052
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.03403002040810068,
+        0.0636660134037297,
+        0.03722782659684023,
+        0.03644550010208212,
+        0.03538213778081868,
+        0.02655902212498937,
+        0.029829039177692727,
+        0.03854632204664258,
+        0.032087938120586405,
+        0.042518093361516476,
+        0.04008076973261975,
+        0.0349638933337184,
+        0.03888647522583878,
+        0.039043973660622025,
+        0.0350439216367122,
+        0.03200159760422631
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 55,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:55.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4363339865962703,
+          "score": 0.0636660134037297
+        },
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45748190663848354,
+          "score": 0.042518093361516476
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45991923026738024,
+          "score": 0.04008076973261975
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.460956026339378,
+          "score": 0.039043973660622025
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.46111352477416123,
+          "score": 0.03888647522583878
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.03724314679545093,
+        0.03722102137387371,
+        0.04553858010237762,
+        0.03629270346502224,
+        0.034626987410537914,
+        0.04211483098497211,
+        0.042813694536196996,
+        0.04635107559811466,
+        0.053561554795813496,
+        0.04871217858191882,
+        0.04093914620363676,
+        0.052275631984703856,
+        0.04958137290523555,
+        0.04405177273901239,
+        0.03549119716944791,
+        0.047136995735874924
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 56,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:56.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4464384452041865,
+          "score": 0.053561554795813496
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.44772436801529614,
+          "score": 0.052275631984703856
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45041862709476443,
+          "score": 0.04958137290523555
+        },
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45128782141808116,
+          "score": 0.04871217858191882
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45286300426412507,
+          "score": 0.047136995735874924
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.03597536118096555,
+        0.04037390492792518,
+        0.02792634509380213,
+        0.0300530543825916,
+        0.028107583498884984,
+        0.03224127656532414,
+        0.038774250949961266,
+        0.038527704656256025,
+        0.038194256264474556,
+        0.0504846705843412,
+        0.048416853309290096,
+        0.03506457742972824,
+        0.03042381609299833,
+        0.0433122730627677,
+        0.03861403393494773,
+        0.0329324741216091
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 57,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:57.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4495153294156588,
+          "score": 0.0504846705843412
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4515831466907099,
+          "score": 0.048416853309290096
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4566877269372323,
+          "score": 0.0433122730627677
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4596260950720748,
+          "score": 0.04037390492792518
+        },
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4612257490500387,
+          "score": 0.038774250949961266
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.03604499688100097,
+        0.03116293295706326,
+        0.03174218090892242,
+        0.04004031610053143,
+        0.03190840041958174,
+        0.039652739318857703,
+        0.03593609782603415,
+        0.053013140799597853,
+        0.035998085817428006,
+        0.03824059070946601,
+        0.04384023633022721,
+        0.03513637767226658,
+        0.03356375141946815,
+        0.034654339700835514,
+        0.03348964473096541,
+        0.034279463717037335
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 58,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:58.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.44698685920040215,
+          "score": 0.053013140799597853
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4561597636697728,
+          "score": 0.04384023633022721
+        },
+        {
+          "block": 3,
+          "channel_range": [
+            96,
+            128
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45995968389946856,
+          "score": 0.04004031610053143
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4603472606811423,
+          "score": 0.039652739318857703
+        },
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.461759409290534,
+          "score": 0.03824059070946601
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.04008179619511497,
+        0.044497337179152885,
+        0.036928501824528934,
+        0.031249466501986813,
+        0.03191870401950944,
+        0.03412671564131723,
+        0.042157607165043694,
+        0.033224571355869356,
+        0.027370268956881095,
+        0.0408506669767078,
+        0.042821141561736865,
+        0.04575115235054516,
+        0.037514941296744105,
+        0.040550577714140536,
+        0.042779650690089766,
+        0.03252443651350497
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 59,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_localized_burst",
+      "timestamp": "2026-10-02T00:00:59.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45424884764945483,
+          "score": 0.04575115235054516
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4555026628208471,
+          "score": 0.044497337179152885
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4571788584382631,
+          "score": 0.042821141561736865
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.45722034930991023,
+          "score": 0.042779650690089766
+        },
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4578423928349563,
+          "score": 0.042157607165043694
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.025961749052351102,
+        0.02406557577703287,
+        0.027228533497791984,
+        0.028039898499512758,
+        0.024530877348002793,
+        0.018285396224348358,
+        0.01933583029763882,
+        0.0180090381193232,
+        0.019069667960206087,
+        0.02200266762473213,
+        0.023069981652783175,
+        0.024965618943947637,
+        0.025018689917027475,
+        0.02304258779884595,
+        0.01779648330168114,
+        0.025430743733665325
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 60,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:00.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 3,
+          "channel_range": [
+            96,
+            128
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47196010150048723,
+          "score": 0.028039898499512758
+        },
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.472771466502208,
+          "score": 0.027228533497791984
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4740382509476489,
+          "score": 0.025961749052351102
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47456925626633467,
+          "score": 0.025430743733665325
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4749813100829725,
+          "score": 0.025018689917027475
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.03290188404504979,
+        0.03262252538645127,
+        0.02925054399598725,
+        0.02453532534095785,
+        0.026309772699445014,
+        0.027152681442712417,
+        0.020909704554222686,
+        0.020506549856660415,
+        0.026618863002600773,
+        0.01793902538783602,
+        0.039093716760842376,
+        0.020053941383331164,
+        0.025974213719705184,
+        0.022555648980385305,
+        0.022601344798349916,
+        0.023979962274759816
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 61,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:01.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4609062832391576,
+          "score": 0.039093716760842376
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4670981159549502,
+          "score": 0.03290188404504979
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4673774746135487,
+          "score": 0.03262252538645127
+        },
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47074945600401275,
+          "score": 0.02925054399598725
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47284731855728757,
+          "score": 0.027152681442712417
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.021340246499919342,
+        0.019287852026516335,
+        0.026538729017493008,
+        0.021583011708365154,
+        0.025398891997213582,
+        0.02811879184302126,
+        0.020999358608152073,
+        0.023461776609595635,
+        0.022368586226541632,
+        0.027694320851820983,
+        0.01888516923823673,
+        0.017869694851299342,
+        0.021218850007904383,
+        0.014944609981284777,
+        0.026309799896003315,
+        0.016760478129925288
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 62,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:02.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47188120815697876,
+          "score": 0.02811879184302126
+        },
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.472305679148179,
+          "score": 0.027694320851820983
+        },
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.473461270982507,
+          "score": 0.026538729017493008
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4736902001039967,
+          "score": 0.026309799896003315
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47460110800278643,
+          "score": 0.025398891997213582
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.02221964982780883,
+        0.01897055467417435,
+        0.023198300600941427,
+        0.024428765516637658,
+        0.021853907654882786,
+        0.02367304541837756,
+        0.03129242677775111,
+        0.02335575497539783,
+        0.02065566804840704,
+        0.01812957013551009,
+        0.023907710535404855,
+        0.025700396659115596,
+        0.02524525398787411,
+        0.018200056912426738,
+        0.023563223406092734,
+        0.027157972738988217
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 63,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:03.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4687075732222489,
+          "score": 0.03129242677775111
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47284202726101177,
+          "score": 0.027157972738988217
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4742996033408844,
+          "score": 0.025700396659115596
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47475474601212586,
+          "score": 0.02524525398787411
+        },
+        {
+          "block": 3,
+          "channel_range": [
+            96,
+            128
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47557123448336236,
+          "score": 0.024428765516637658
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.028849401174541843,
+        0.02426536994902648,
+        0.025327946228310427,
+        0.014827630410506625,
+        0.025085760905620726,
+        0.022315287684650836,
+        0.022578968412413945,
+        0.02082835540063844,
+        0.016607424398243826,
+        0.021527662050724247,
+        0.021473246146471038,
+        0.021975988412350274,
+        0.020554562592800082,
+        0.02027367461507208,
+        0.0246203999917443,
+        0.023612073392103246
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 64,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:04.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4711505988254582,
+          "score": 0.028849401174541843
+        },
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4746720537716896,
+          "score": 0.025327946228310427
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4749142390943793,
+          "score": 0.025085760905620726
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4753796000082557,
+          "score": 0.0246203999917443
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4757346300509735,
+          "score": 0.02426536994902648
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.017229010824048225,
+        0.019484765763822826,
+        0.02409598619769488,
+        0.022811858247877775,
+        0.026577393561043442,
+        0.021753962104095994,
+        0.023947228397651118,
+        0.024910372576031178,
+        0.02880621957140571,
+        0.03131853450703229,
+        0.02171728720472163,
+        0.028675709158549764,
+        0.020498396286807472,
+        0.018033193029696748,
+        0.017378231866751057,
+        0.020609432667765788
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 65,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:05.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4686814654929677,
+          "score": 0.03131853450703229
+        },
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4711937804285943,
+          "score": 0.02880621957140571
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4713242908414502,
+          "score": 0.028675709158549764
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47342260643895656,
+          "score": 0.026577393561043442
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4750896274239688,
+          "score": 0.024910372576031178
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.022489318220297982,
+        0.027717722523527562,
+        0.026819454859174356,
+        0.02780796228063797,
+        0.023683004645594936,
+        0.03348892745333321,
+        0.022430030407021444,
+        0.018286422272179616,
+        0.027811054286904953,
+        0.024316493025461294,
+        0.0273278993392009,
+        0.03312746594924287,
+        0.0231333140221487,
+        0.02284419917270411,
+        0.023849886365326298,
+        0.029942758549177786
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 66,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:06.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4665110725466668,
+          "score": 0.03348892745333321
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4668725340507571,
+          "score": 0.03312746594924287
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4700572414508222,
+          "score": 0.029942758549177786
+        },
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47218894571309505,
+          "score": 0.027811054286904953
+        },
+        {
+          "block": 3,
+          "channel_range": [
+            96,
+            128
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.472192037719362,
+          "score": 0.02780796228063797
+        }
+      ]
+    },
+    {
+      "alarm": true,
+      "block_scores": [
+        0.5892767358353054,
+        0.5863225027050294,
+        0.5904147419518402,
+        0.5889200059168638,
+        0.604240549792761,
+        0.594206122943861,
+        0.5939639500881407,
+        0.5963093249473602,
+        0.5962498118161277,
+        0.5916793492092445,
+        0.5991269489214762,
+        0.5954738672489919,
+        0.5936142218966294,
+        0.6021715256682784,
+        0.5881314152143666,
+        0.5876873768043853
+      ],
+      "event_id": "synthetic-shock-001",
+      "event_label": "global_shock",
+      "flagged_blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "frame_index": 67,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:07.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": true,
+          "margin_over_threshold": 0.10424054979276098,
+          "score": 0.604240549792761
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": true,
+          "margin_over_threshold": 0.10217152566827836,
+          "score": 0.6021715256682784
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": true,
+          "margin_over_threshold": 0.09912694892147622,
+          "score": 0.5991269489214762
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": true,
+          "margin_over_threshold": 0.09630932494736022,
+          "score": 0.5963093249473602
+        },
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": true,
+          "margin_over_threshold": 0.09624981181612768,
+          "score": 0.5962498118161277
+        }
+      ]
+    },
+    {
+      "alarm": true,
+      "block_scores": [
+        0.5922586688955492,
+        0.5945431589611536,
+        0.6025123840012185,
+        0.59591493922553,
+        0.588291412712749,
+        0.5882322504857227,
+        0.5958953832045992,
+        0.5981762501745569,
+        0.5941156148490686,
+        0.5958643558895412,
+        0.5910776412138696,
+        0.5919050926887052,
+        0.5975097388577988,
+        0.5949498984538778,
+        0.5914107719499779,
+        0.5981255396907167
+      ],
+      "event_id": "synthetic-shock-001",
+      "event_label": "global_shock",
+      "flagged_blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "frame_index": 68,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:08.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": true,
+          "margin_over_threshold": 0.10251238400121854,
+          "score": 0.6025123840012185
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": true,
+          "margin_over_threshold": 0.09817625017455689,
+          "score": 0.5981762501745569
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": true,
+          "margin_over_threshold": 0.09812553969071669,
+          "score": 0.5981255396907167
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": true,
+          "margin_over_threshold": 0.09750973885779879,
+          "score": 0.5975097388577988
+        },
+        {
+          "block": 3,
+          "channel_range": [
+            96,
+            128
+          ],
+          "flagged": true,
+          "margin_over_threshold": 0.09591493922552996,
+          "score": 0.59591493922553
+        }
+      ]
+    },
+    {
+      "alarm": true,
+      "block_scores": [
+        0.6006719835307074,
+        0.5900779601948924,
+        0.589499577780885,
+        0.5961004172253931,
+        0.5991296040981007,
+        0.5940978050440437,
+        0.5909161774097367,
+        0.5922717565163904,
+        0.5937928244166468,
+        0.5896777210313985,
+        0.591488483976208,
+        0.583042279071369,
+        0.5924556573384616,
+        0.5915173617786363,
+        0.5850571018932211,
+        0.598453253220199
+      ],
+      "event_id": "synthetic-shock-001",
+      "event_label": "global_shock",
+      "flagged_blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "frame_index": 69,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:09.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": true,
+          "margin_over_threshold": 0.10067198353070739,
+          "score": 0.6006719835307074
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": true,
+          "margin_over_threshold": 0.09912960409810068,
+          "score": 0.5991296040981007
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": true,
+          "margin_over_threshold": 0.09845325322019904,
+          "score": 0.598453253220199
+        },
+        {
+          "block": 3,
+          "channel_range": [
+            96,
+            128
+          ],
+          "flagged": true,
+          "margin_over_threshold": 0.09610041722539309,
+          "score": 0.5961004172253931
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": true,
+          "margin_over_threshold": 0.09409780504404375,
+          "score": 0.5940978050440437
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.020003731259128344,
+        0.01907155043144908,
+        0.028310898935579133,
+        0.020103963270436606,
+        0.025547317160477777,
+        0.02364765815613653,
+        0.019316523145010263,
+        0.02402830750958216,
+        0.023941136046030875,
+        0.02122365179704048,
+        0.022567930851449067,
+        0.02347370656066271,
+        0.02536694476692539,
+        0.023401364515430758,
+        0.024238013582711253,
+        0.018769916840926874
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 70,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:10.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 2,
+          "channel_range": [
+            64,
+            96
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47168910106442086,
+          "score": 0.028310898935579133
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47445268283952224,
+          "score": 0.025547317160477777
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4746330552330746,
+          "score": 0.02536694476692539
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47576198641728873,
+          "score": 0.024238013582711253
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4759716924904178,
+          "score": 0.02402830750958216
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.022892376677039767,
+        0.02421577000932479,
+        0.018799331464809662,
+        0.02497813498157563,
+        0.022399780387798437,
+        0.026346591294489265,
+        0.02549241153344406,
+        0.026578990823848004,
+        0.022423644541496875,
+        0.024408385546457044,
+        0.027192586866740504,
+        0.027096196219985,
+        0.026972605371716352,
+        0.020952883431821306,
+        0.023288806823211435,
+        0.021544427429464143
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 71,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:11.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47280741313325947,
+          "score": 0.027192586866740504
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.472903803780015,
+          "score": 0.027096196219985
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47302739462828364,
+          "score": 0.026972605371716352
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.473421009176152,
+          "score": 0.026578990823848004
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47365340870551076,
+          "score": 0.026346591294489265
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.020041239626990004,
+        0.02515073669834411,
+        0.02407614440209599,
+        0.021289540738076734,
+        0.019919591386138125,
+        0.02124597791376732,
+        0.025852978609907127,
+        0.023026192826155777,
+        0.026486259972332834,
+        0.02049735003353353,
+        0.022795360063298763,
+        0.023953727710792138,
+        0.026949409948013543,
+        0.023572385084917456,
+        0.025488463892917534,
+        0.02742667165358823
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 72,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:12.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47257332834641175,
+          "score": 0.02742667165358823
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47305059005198646,
+          "score": 0.026949409948013543
+        },
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47351374002766716,
+          "score": 0.026486259972332834
+        },
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47414702139009285,
+          "score": 0.025852978609907127
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47451153610708247,
+          "score": 0.025488463892917534
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.020871957757174507,
+        0.02640269589968491,
+        0.01835708822047617,
+        0.0217120450110246,
+        0.021890928870475494,
+        0.023599765567318035,
+        0.018072928531634582,
+        0.02340335865549045,
+        0.01915899370197984,
+        0.01700435866152133,
+        0.01827506618199116,
+        0.021724172778158177,
+        0.022567973757810566,
+        0.02145796720745858,
+        0.023085829322320485,
+        0.02523039520971301
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 73,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:13.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4735973041003151,
+          "score": 0.02640269589968491
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.474769604790287,
+          "score": 0.02523039520971301
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.476400234432682,
+          "score": 0.023599765567318035
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4765966413445096,
+          "score": 0.02340335865549045
+        },
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4769141706776795,
+          "score": 0.023085829322320485
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.03379119032673943,
+        0.019474726896366285,
+        0.024804533777286357,
+        0.022745763238250966,
+        0.023614240887901452,
+        0.026792671400196557,
+        0.026662717107969584,
+        0.019411967701874772,
+        0.02822229563949729,
+        0.025293196271884456,
+        0.022019327429120914,
+        0.026854876929463544,
+        0.03153138893225498,
+        0.015798735391430584,
+        0.01843900407675604,
+        0.026231202889292572
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 74,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:14.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.46620880967326056,
+          "score": 0.03379119032673943
+        },
+        {
+          "block": 12,
+          "channel_range": [
+            384,
+            416
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.468468611067745,
+          "score": 0.03153138893225498
+        },
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4717777043605027,
+          "score": 0.02822229563949729
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47314512307053647,
+          "score": 0.026854876929463544
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47320732859980347,
+          "score": 0.026792671400196557
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.024032053525329437,
+        0.019226402407280026,
+        0.019919697303795177,
+        0.02386641621185561,
+        0.01931434436606489,
+        0.024463369104901194,
+        0.021193971312051307,
+        0.016576405354457636,
+        0.021449912725555523,
+        0.02596971960926373,
+        0.020949076484910647,
+        0.02559333966560399,
+        0.02161000211726867,
+        0.026141506623811792,
+        0.02166353841635152,
+        0.017240262040989274
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 75,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:15.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4738584933761882,
+          "score": 0.026141506623811792
+        },
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47403028039073625,
+          "score": 0.02596971960926373
+        },
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.474406660334396,
+          "score": 0.02559333966560399
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4755366308950988,
+          "score": 0.024463369104901194
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47596794647467056,
+          "score": 0.024032053525329437
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.02885510172912268,
+        0.02680374642899192,
+        0.01690269188262868,
+        0.023259314658535882,
+        0.022197954687308202,
+        0.02140560569492302,
+        0.02289263820120978,
+        0.028702413986252402,
+        0.025975331906365917,
+        0.022076699091742834,
+        0.026532285079263383,
+        0.025573458343680713,
+        0.01936777627822564,
+        0.024662045029152813,
+        0.029026799299386164,
+        0.02878569058228442
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 76,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:16.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 14,
+          "channel_range": [
+            448,
+            480
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4709732007006138,
+          "score": 0.029026799299386164
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4711448982708773,
+          "score": 0.02885510172912268
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4712143094177156,
+          "score": 0.02878569058228442
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4712975860137476,
+          "score": 0.028702413986252402
+        },
+        {
+          "block": 1,
+          "channel_range": [
+            32,
+            64
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4731962535710081,
+          "score": 0.02680374642899192
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.022592367443424816,
+        0.021762850094795456,
+        0.022228956287073224,
+        0.023565635946946013,
+        0.01943207400404368,
+        0.024472076195596243,
+        0.017911106636076583,
+        0.025193008174800285,
+        0.03187105482821326,
+        0.021293058585654594,
+        0.026316336688813134,
+        0.020518377539242207,
+        0.0175737797429046,
+        0.018906952095797906,
+        0.0171462739550014,
+        0.025375386676164978
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 77,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:17.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 8,
+          "channel_range": [
+            256,
+            288
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4681289451717867,
+          "score": 0.03187105482821326
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4736836633111869,
+          "score": 0.026316336688813134
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47462461332383504,
+          "score": 0.025375386676164978
+        },
+        {
+          "block": 7,
+          "channel_range": [
+            224,
+            256
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4748069918251997,
+          "score": 0.025193008174800285
+        },
+        {
+          "block": 5,
+          "channel_range": [
+            160,
+            192
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4755279238044038,
+          "score": 0.024472076195596243
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.024916622051920283,
+        0.021880947081518772,
+        0.02095739881069936,
+        0.021321410915798634,
+        0.027860054087640515,
+        0.02025697179562662,
+        0.020300392767246562,
+        0.018914335366167555,
+        0.0186046693807579,
+        0.025520396738088123,
+        0.027881540168912932,
+        0.029729396915362912,
+        0.020423988338952745,
+        0.028195639416492568,
+        0.02250810962097126,
+        0.023385031759455645
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 78,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:18.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 11,
+          "channel_range": [
+            352,
+            384
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4702706030846371,
+          "score": 0.029729396915362912
+        },
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47180436058350744,
+          "score": 0.028195639416492568
+        },
+        {
+          "block": 10,
+          "channel_range": [
+            320,
+            352
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4721184598310871,
+          "score": 0.027881540168912932
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47213994591235947,
+          "score": 0.027860054087640515
+        },
+        {
+          "block": 9,
+          "channel_range": [
+            288,
+            320
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47447960326191185,
+          "score": 0.025520396738088123
+        }
+      ]
+    },
+    {
+      "alarm": false,
+      "block_scores": [
+        0.02634557173320983,
+        0.021220692265651903,
+        0.022024256829878533,
+        0.02131243340303377,
+        0.02437321852556368,
+        0.017583029959772147,
+        0.02746187283980006,
+        0.021040409889033898,
+        0.023063828977399888,
+        0.024019433421506385,
+        0.024359631884781994,
+        0.018987646694013677,
+        0.021170206935327437,
+        0.02922275542916071,
+        0.021379499532759444,
+        0.025682589168006618
+      ],
+      "event_id": null,
+      "event_label": "none",
+      "flagged_blocks": [],
+      "frame_index": 79,
+      "rationale": "Each block score is 0.45×peak_abs + 0.35×RMS + 0.20×mean_abs; flagged iff score >= the preregistered threshold.",
+      "regime": "synthetic_global_shock",
+      "timestamp": "2026-10-02T00:01:19.000Z",
+      "top_ranked_blocks": [
+        {
+          "block": 13,
+          "channel_range": [
+            416,
+            448
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4707772445708393,
+          "score": 0.02922275542916071
+        },
+        {
+          "block": 6,
+          "channel_range": [
+            192,
+            224
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47253812716019994,
+          "score": 0.02746187283980006
+        },
+        {
+          "block": 0,
+          "channel_range": [
+            0,
+            32
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47365442826679016,
+          "score": 0.02634557173320983
+        },
+        {
+          "block": 15,
+          "channel_range": [
+            480,
+            512
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.47431741083199336,
+          "score": 0.025682589168006618
+        },
+        {
+          "block": 4,
+          "channel_range": [
+            128,
+            160
+          ],
+          "flagged": false,
+          "margin_over_threshold": -0.4756267814744363,
+          "score": 0.02437321852556368
+        }
+      ]
+    }
+  ],
+  "report_schema_version": 1,
+  "scope": "offline replay triage/evaluation only; not an operational alarm, safety instrument, or process-control function",
+  "status": "synthetic_demo"
+}
