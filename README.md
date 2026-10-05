@@ -51,6 +51,10 @@ Supported evidence classes are `public_dataset` and `synthetic`. Result labels i
 
 This is a local metadata-and-reporting MVP, not a validation authority, experiment runner, signal evaluator, data store, or provenance service. It makes no claims about safety, operations, device performance, authorship, or measurement validity. The native output formats differ; the bundled manifests are transparent, hand-mapped examples rather than automatic upstream adapters.
 
+## Related tools
+
+- [**quantum-claims-passport**](https://github.com/sparkainlp-x/quantum-claims-passport) ([report](https://sparkainlp-x.github.io/quantum-claims-passport/report.html)): a sibling, offline claims audit. Evidence Passport records *one run's declared evidence*; the Quantum Claims Evidence Passport classifies *public claims against their cited sources* (announcement/plan, computational model, animal behavioral result, hypothesis, unsupported inference) without combining them into a score. No DOI yet.
+
 ## License
 
 GNU Affero General Public License v3.0 only (AGPL-3.0-only). See [LICENSE](LICENSE). Commercial licensing: [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md).

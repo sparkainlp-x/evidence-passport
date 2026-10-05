@@ -4,6 +4,9 @@ All notable changes to this project. Bundled public-dataset example preserves th
 
 ## Unreleased
 
+### Documentation
+- README: "Related tools" section cross-linking the sibling quantum-claims-passport claims audit; forbidden-terms allowlist extended for that project name only.
+
 ## 0.1.0 — 2026-10-05
 
 ### Added

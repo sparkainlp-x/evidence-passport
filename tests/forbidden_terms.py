@@ -31,6 +31,9 @@ ALLOWED = [
     r"[Mm]ulti-[Qq]uantum OES",
     r"multi-quantum-oes",
     r"quantum_lab_path",
+    # Sibling audit tool (classifies claims; makes none)
+    r"quantum-claims-passport",
+    r"Quantum Claims Evidence Passport",
     r"isolated toy simulation",
     r"exact classical simulation, not a QPU",
     r"not a QPU",
