@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/sparkainlp-x/evidence-passport/actions/workflows/ci.yml/badge.svg)](https://github.com/sparkainlp-x/evidence-passport/actions/workflows/ci.yml)
 [![License: AGPL-3.0-only](https://img.shields.io/badge/License-AGPL--3.0--only-blue.svg)](LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23165143.svg)](https://doi.org/10.5281/zenodo.23165143)
 [![Evidence: honest labels](https://img.shields.io/badge/evidence-criterion%20not%20met%20%7C%20SYNTHETIC-blue.svg)](#bundled-examples)
 
 
@@ -56,7 +57,7 @@ GNU Affero General Public License v3.0 only (AGPL-3.0-only). See [LICENSE](LICEN
 
 ## Cite
 
-See [CITATION.cff](CITATION.cff). A Zenodo DOI will be added after the GitHub–Zenodo webhook is enabled and a release is tagged (not done in this initial push).
+See [CITATION.cff](CITATION.cff). Concept DOI (all versions): [10.5281/zenodo.23165143](https://doi.org/10.5281/zenodo.23165143). Version DOI for v0.1.0: [10.5281/zenodo.23165144](https://doi.org/10.5281/zenodo.23165144).
 
 ## Security
 

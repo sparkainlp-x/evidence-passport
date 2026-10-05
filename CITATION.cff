@@ -8,10 +8,18 @@ authors:
     affiliation: "Spark AI NLP"
     orcid: "https://orcid.org/0009-0000-9778-5374"
 repository-code: "https://github.com/sparkainlp-x/evidence-passport"
-url: "https://sparkainlpx.xyz"
+url: "https://doi.org/10.5281/zenodo.23165143"
 license: AGPL-3.0-only
 version: "0.1.0"
 date-released: "2026-10-05"
+doi: 10.5281/zenodo.23165143
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23165143
+    description: "Concept DOI (all versions)"
+  - type: doi
+    value: 10.5281/zenodo.23165144
+    description: "Version DOI for v0.1.0"
 abstract: >-
   Offline, Python-standard-library MVP that validates a single experiment-run
   manifest and writes a static HTML evidence passport plus normalized JSON.
