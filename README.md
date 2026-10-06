@@ -53,7 +53,7 @@ This is a local metadata-and-reporting MVP, not a validation authority, experime
 
 ## Related tools
 
-- [**quantum-claims-passport**](https://github.com/sparkainlp-x/quantum-claims-passport) ([report](https://sparkainlp-x.github.io/quantum-claims-passport/report.html)): a sibling, offline claims audit. Evidence Passport records *one run's declared evidence*; the Quantum Claims Evidence Passport classifies *public claims against their cited sources* (announcement/plan, computational model, animal behavioral result, hypothesis, unsupported inference) without combining them into a score. No DOI yet.
+- [**quantum-claims-passport**](https://github.com/sparkainlp-x/quantum-claims-passport) ([report](https://sparkainlp-x.github.io/quantum-claims-passport/report.html)): a sibling, offline claims audit. Evidence Passport records *one run's declared evidence*; the Quantum Claims Evidence Passport classifies *public claims against their cited sources* (announcement/plan, computational model, animal behavioral result, hypothesis, unsupported inference) without combining them into a score. Concept DOI (all versions): [10.5281/zenodo.23167801](https://doi.org/10.5281/zenodo.23167801).
 
 ## License
 

@@ -46,3 +46,11 @@ references:
         orcid: "https://orcid.org/0009-0000-9778-5374"
     repository-code: "https://github.com/sparkainlp-x/oes-resilience"
     doi: "10.5281/zenodo.23071166"
+  - type: software
+    title: "Quantum Claims Evidence Passport"
+    authors:
+      - family-names: "Brisson"
+        given-names: "Jean-François"
+        orcid: "https://orcid.org/0009-0000-9778-5374"
+    repository-code: "https://github.com/sparkainlp-x/quantum-claims-passport"
+    doi: "10.5281/zenodo.23167801"

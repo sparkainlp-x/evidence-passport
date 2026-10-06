@@ -34,6 +34,12 @@
       "relation": "references",
       "scheme": "doi",
       "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.23167801",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "software"
     }
   ],
   "communities": [

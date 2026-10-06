@@ -6,6 +6,7 @@ All notable changes to this project. Bundled public-dataset example preserves th
 
 ### Documentation
 - README: "Related tools" section cross-linking the sibling quantum-claims-passport claims audit; forbidden-terms allowlist extended for that project name only.
+- README: replace the stale "No DOI yet" note for quantum-claims-passport with its concept DOI [10.5281/zenodo.23167801](https://doi.org/10.5281/zenodo.23167801); add the same DOI to `CITATION.cff` references and `.zenodo.json` related identifiers (relation `references`).
 
 ## 0.1.0 — 2026-10-05
 
