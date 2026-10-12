@@ -47,6 +47,8 @@ Each v1 manifest identifies one `run_id`; `project`, `dataset`, `code`, `protoco
 
 Supported evidence classes are `public_dataset` and `synthetic`. Result labels include `criterion_met`, `criterion_not_met`, `descriptive_only`, `synthetic_example`, and `not_stated`. The tool never infers a result label from the metric values.
 
+A manifest with `evidence_class: synthetic` and `result_label: criterion_met` is accepted, but `validate` and `build` print a `WARNING:` line on stderr, the HTML report shows a visible WARNING box, and the normalized JSON gains a `warnings` array. A criterion met on synthetic inputs is not evidence about real or public data. Reports for other manifests are unchanged.
+
 ## Boundaries
 
 This is a local metadata-and-reporting MVP, not a validation authority, experiment runner, signal evaluator, data store, or provenance service. It makes no claims about safety, operations, device performance, authorship, or measurement validity. The native output formats differ; the bundled manifests are transparent, hand-mapped examples rather than automatic upstream adapters.
