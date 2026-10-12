@@ -4,6 +4,16 @@ All notable changes to this project. Bundled public-dataset example preserves th
 
 ## Unreleased
 
+### Changed
+- A `synthetic` manifest labelled `criterion_met` now produces a visible WARNING in `validate`/`build` output (stderr), in the HTML report, and as a `warnings` array in normalized JSON. It is still accepted. Output for the bundled examples is byte-identical.
+
+### Tests
+- `tests/test_fail_closed.py`: one-change-at-a-time rejection cases (missing/unknown fields, wrong types, non-finite numbers, bad URLs, hash mismatches, unsafe and symlinked paths, duplicates), HTML escaping of every free-text field, and the synthetic `criterion_met` warning.
+- `tests/test_schema_consistency.py`: checks that `manifest.schema.json` and the validator agree on required fields, closed objects, enums and patterns.
+
+### Documentation
+- `REVIEW_GUIDE.md` for reviewers.
+
 ### Documentation
 - README: "Related tools" section cross-linking the sibling quantum-claims-passport claims audit; forbidden-terms allowlist extended for that project name only.
 - README: replace the stale "No DOI yet" note for quantum-claims-passport with its concept DOI [10.5281/zenodo.23167801](https://doi.org/10.5281/zenodo.23167801); add the same DOI to `CITATION.cff` references and `.zenodo.json` related identifiers (relation `references`).
