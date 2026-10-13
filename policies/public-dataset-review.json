@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "policy_id": "public-dataset-review-v1",
+  "allowed_evidence_classes": ["public_dataset"],
+  "allowed_result_labels": ["criterion_met", "criterion_not_met", "descriptive_only"],
+  "required_artifact_roles": ["protocol", "results"],
+  "require_code_commit": false,
+  "require_seed": true
+}

@@ -35,6 +35,8 @@ RESULT_LABELS = {
 }
 HEX_256 = re.compile(r"^[0-9a-fA-F]{64}$")
 RUN_ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]{0,100}$")
+POLICY_ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]{0,63}$")
+POLICY_SCHEMA_VERSION = 1
 
 
 class ManifestError(ValueError):
@@ -320,6 +322,83 @@ def load_and_validate(manifest_path: Path) -> dict[str, Any]:
     return validate_manifest_data(data, manifest_path)
 
 
+def _policy_list(value: Any, where: str, allowed_values: set[str] | None = None) -> list[str]:
+    if not isinstance(value, list) or not value:
+        raise ManifestError(f"{where} must be a non-empty array of strings")
+    normalized: list[str] = []
+    for index, item in enumerate(value):
+        text = _text(item, f"{where}[{index}]")
+        if allowed_values is not None and text not in allowed_values:
+            raise ManifestError(f"{where}[{index}] has unsupported value: {text}")
+        normalized.append(text)
+    if len(set(normalized)) != len(normalized):
+        raise ManifestError(f"{where} must not contain duplicates")
+    return normalized
+
+
+def validate_policy_data(data: Any) -> dict[str, Any]:
+    """Validate a small, offline policy that constrains accepted run manifests."""
+    root = _object(
+        data,
+        "policy",
+        {
+            "schema_version", "policy_id", "allowed_evidence_classes",
+            "allowed_result_labels", "required_artifact_roles",
+            "require_code_commit", "require_seed",
+        },
+        {
+            "schema_version", "policy_id", "allowed_evidence_classes",
+            "allowed_result_labels", "required_artifact_roles",
+            "require_code_commit", "require_seed",
+        },
+    )
+    if type(root["schema_version"]) is not int or root["schema_version"] != POLICY_SCHEMA_VERSION:
+        raise ManifestError(f"policy.schema_version must be integer {POLICY_SCHEMA_VERSION}")
+    policy_id = _text(root["policy_id"], "policy.policy_id")
+    if not POLICY_ID.fullmatch(policy_id):
+        raise ManifestError("policy.policy_id may contain only letters, digits, dot, underscore, and hyphen; max 64 characters")
+    allowed_classes = _policy_list(root["allowed_evidence_classes"], "policy.allowed_evidence_classes", EVIDENCE_CLASSES)
+    allowed_labels = _policy_list(root["allowed_result_labels"], "policy.allowed_result_labels", RESULT_LABELS)
+    required_roles = _policy_list(root["required_artifact_roles"], "policy.required_artifact_roles")
+    for field in ("require_code_commit", "require_seed"):
+        if type(root[field]) is not bool:
+            raise ManifestError(f"policy.{field} must be a boolean")
+    return {
+        "schema_version": POLICY_SCHEMA_VERSION,
+        "policy_id": policy_id,
+        "allowed_evidence_classes": allowed_classes,
+        "allowed_result_labels": allowed_labels,
+        "required_artifact_roles": required_roles,
+        "require_code_commit": root["require_code_commit"],
+        "require_seed": root["require_seed"],
+    }
+
+
+def load_and_validate_policy(policy_path: Path) -> dict[str, Any]:
+    policy_path = policy_path.expanduser().resolve()
+    return validate_policy_data(read_json(policy_path))
+
+
+def check_policy(report: dict[str, Any], policy: dict[str, Any]) -> list[str]:
+    """Return policy failures; an empty list means the manifest passed this policy."""
+    failures: list[str] = []
+    if report["evidence_class"] not in policy["allowed_evidence_classes"]:
+        failures.append(
+            f"evidence_class {report['evidence_class']!r} is not allowed by policy"
+        )
+    if report["result_label"] not in policy["allowed_result_labels"]:
+        failures.append(f"result_label {report['result_label']!r} is not allowed by policy")
+    present_roles = {item["role"] for item in report["integrity"]["files"]}
+    missing_roles = sorted(set(policy["required_artifact_roles"]) - present_roles)
+    if missing_roles:
+        failures.append("missing required artifact role(s): " + ", ".join(missing_roles))
+    if policy["require_code_commit"] and not report["code"]["commit"]:
+        failures.append("code.commit is required by policy but is not recorded")
+    if policy["require_seed"] and report["seed"] is None:
+        failures.append("seed is required by policy but is not recorded")
+    return failures
+
+
 def _display_number(value: int | float | None) -> str:
     if value is None:
         return "Not reported"
@@ -429,6 +508,9 @@ def make_parser() -> argparse.ArgumentParser:
     build = sub.add_parser("build", help="validate and write an offline HTML/JSON report pair")
     build.add_argument("manifest", type=Path)
     build.add_argument("--out-dir", type=Path, default=Path("reports"), help="report output directory (default: ./reports)")
+    gate = sub.add_parser("gate", help="validate a manifest and enforce an offline policy file")
+    gate.add_argument("manifest", type=Path)
+    gate.add_argument("--policy", type=Path, required=True, help="policy JSON file")
     return parser
 
 
@@ -440,6 +522,18 @@ def main(argv: list[str] | None = None) -> int:
             print(f"VALID: {report['run_id']} — {report['project']['name']} ({report['evidence_class']})")
             print(f"Verified {len(report['integrity']['files'])} local artifact(s); bundle is internally consistent.")
             print("This check does not establish authorship, timing, provenance authenticity, or measurement validity.")
+            return 0
+        if args.command == "gate":
+            policy = load_and_validate_policy(args.policy)
+            failures = check_policy(report, policy)
+            if failures:
+                print(f"GATE FAILED: policy {policy['policy_id']}", file=sys.stderr)
+                for failure in failures:
+                    print(f"- {failure}", file=sys.stderr)
+                return 3
+            print(f"GATE PASSED: {report['run_id']} — policy {policy['policy_id']}")
+            print(f"Verified {len(report['integrity']['files'])} artifact(s); all declared policy checks passed.")
+            print("This gate checks declared evidence and local bundle consistency; it does not independently validate the experiment.")
             return 0
         html_path, json_path = _write_report(args.out_dir, report)
         print(f"HTML: {html_path}")

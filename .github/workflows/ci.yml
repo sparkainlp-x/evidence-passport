@@ -34,6 +34,8 @@ jobs:
             python evidence_passport.py build "$m" --out-dir /tmp/ep-reports
           done
           ls -la /tmp/ep-reports
+      - name: Exercise the public-dataset release policy
+        run: python evidence_passport.py gate examples/oes-resilience-smap-msl-public-v0.5.json --policy policies/public-dataset-review.json
 
   forbidden-terms:
     name: Forbidden-terms scan
