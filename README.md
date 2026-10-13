@@ -10,6 +10,12 @@ Evidence Passport turns one saved experiment-run manifest into a readable, stati
 
 The tool uses only Python’s standard library. It makes no network calls and starts no server. The bundled HTML has inline styling and no external assets or scripts.
 
+## Intended use and validation status
+
+The narrow product hypothesis is an offline evidence-packaging and release gate for a small AI evaluation or research-software team: check one run manifest and its local artifacts against a team-owned policy, then produce a portable HTML/JSON record. This is a **hypothesis, not validated buyer demand**; the economic buyer, budget owner, and value of the workflow remain to be established with an external partner. The repository does not claim a paid pilot, production deployment, independent audit, or product-market fit.
+
+For a preregistered partner evaluation, see the [first-pilot playbook](docs/pilot-playbook.md). For a pinned GitHub Actions example, see [CI integration](docs/ci-integration.md). Both are guidance/templates, not records of completed customer work.
+
 ## Run it
 
 From this folder, using Python 3.10 or newer:
@@ -56,7 +62,7 @@ Supported evidence classes are `public_dataset` and `synthetic`. Result labels i
 
 ## Boundaries
 
-This is a local metadata-and-reporting MVP, not a validation authority, experiment runner, signal evaluator, data store, or provenance service. It makes no claims about safety, operations, device performance, authorship, or measurement validity. The gate is an opt-in local policy check; it does not create signed attestations, role-based approvals, or tamper-evident logs. The native output formats differ; the bundled manifests are transparent, hand-mapped examples rather than automatic upstream adapters.
+This is a local metadata-and-reporting MVP, not a validation authority, experiment runner, signal evaluator, data store, or provenance service. It makes no claims about safety, operations, device performance, authorship, or measurement validity. The gate is an opt-in local policy check; it does not create signed attestations, role-based approvals, or tamper-evident logs. The native output formats differ; the bundled manifests are transparent, hand-mapped examples rather than automatic upstream adapters. See the [pilot playbook](docs/pilot-playbook.md) for the current validation questions and boundaries.
 
 ## Related tools
 
