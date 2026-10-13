@@ -17,10 +17,17 @@ From this folder, using Python 3.10 or newer:
 ```bash
 python3 evidence_passport.py validate examples/oes-resilience-smap-msl-public-v0.5.json
 python3 evidence_passport.py build examples/oes-resilience-smap-msl-public-v0.5.json --out-dir reports
+python3 evidence_passport.py gate examples/oes-resilience-smap-msl-public-v0.5.json --policy policies/public-dataset-review.json
 python3 -m unittest discover -s tests -v
 ```
 
 `build` writes `<run_id>.html` and `<run_id>.normalized.json` into the chosen directory. To inspect all examples, repeat `validate` and `build` with each JSON manifest in `examples/`. No package installation is required.
+
+## Policy-as-code release gate
+
+`gate` first runs the same manifest, path-containment, and SHA-256 checks as `validate`, then applies a local JSON policy. Policies use schema v1 ([`policy.schema.json`](policy.schema.json)) and must explicitly list allowed evidence classes, allowed result labels, required artifact roles, and whether a code commit and seed are mandatory. Unknown policy fields and unsupported enum values fail closed. A policy mismatch exits with status `3`; invalid policy or manifest input exits with status `2`.
+
+The bundled [`public-dataset-review.json`](policies/public-dataset-review.json) requires a seed plus `protocol` and `results` artifacts. It explicitly accepts `criterion_not_met`, so a failed preregistered criterion is not treated as a packaging failure. Use the command in a CI job to stop a downstream release when its declared evidence requirements are absent. The gate checks declared fields and local bundle consistency only; it does not assess whether the policy is appropriate, independently verify evidence, authenticate authors, or certify a release. A policy file is configuration, not a signature or approval record.
 
 ## What the hashes do—and do not—show
 
@@ -49,7 +56,7 @@ Supported evidence classes are `public_dataset` and `synthetic`. Result labels i
 
 ## Boundaries
 
-This is a local metadata-and-reporting MVP, not a validation authority, experiment runner, signal evaluator, data store, or provenance service. It makes no claims about safety, operations, device performance, authorship, or measurement validity. The native output formats differ; the bundled manifests are transparent, hand-mapped examples rather than automatic upstream adapters.
+This is a local metadata-and-reporting MVP, not a validation authority, experiment runner, signal evaluator, data store, or provenance service. It makes no claims about safety, operations, device performance, authorship, or measurement validity. The gate is an opt-in local policy check; it does not create signed attestations, role-based approvals, or tamper-evident logs. The native output formats differ; the bundled manifests are transparent, hand-mapped examples rather than automatic upstream adapters.
 
 ## Related tools
 

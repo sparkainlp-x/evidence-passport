@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/sparkainlp-x/evidence-passport/main/policy.schema.json",
+  "title": "Evidence Passport Policy v1",
+  "description": "Offline acceptance rules applied after a run manifest and its local artifacts pass validation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "policy_id",
+    "allowed_evidence_classes",
+    "allowed_result_labels",
+    "required_artifact_roles",
+    "require_code_commit",
+    "require_seed"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "policy_id": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,63}$" },
+    "allowed_evidence_classes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "enum": ["public_dataset", "synthetic"] }
+    },
+    "allowed_result_labels": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "enum": ["criterion_met", "criterion_not_met", "descriptive_only", "synthetic_example", "not_stated"] }
+    },
+    "required_artifact_roles": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1, "pattern": ".*\\S.*" }
+    },
+    "require_code_commit": { "type": "boolean" },
+    "require_seed": { "type": "boolean" }
+  }
+}

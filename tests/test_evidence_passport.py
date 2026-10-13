@@ -77,12 +77,27 @@ class EvidencePassportTests(unittest.TestCase):
             ],
         }
         self.write_manifest()
+        self.policy = {
+            "schema_version": 1,
+            "policy_id": "test-public-review",
+            "allowed_evidence_classes": ["public_dataset"],
+            "allowed_result_labels": ["criterion_met", "criterion_not_met", "descriptive_only"],
+            "required_artifact_roles": ["protocol", "results"],
+            "require_code_commit": False,
+            "require_seed": True,
+        }
+        self.write_policy()
 
     def tearDown(self) -> None:
         self.temp.cleanup()
 
     def write_manifest(self) -> None:
         self.manifest_path.write_text(json.dumps(self.manifest, indent=2) + "\n", encoding="utf-8")
+
+    def write_policy(self) -> Path:
+        policy_path = self.root / "policy.json"
+        policy_path.write_text(json.dumps(self.policy, indent=2) + "\n", encoding="utf-8")
+        return policy_path
 
     def test_valid_manifest_preserves_project_and_public_result_labels(self) -> None:
         normalized = ep.load_and_validate(self.manifest_path)
@@ -148,6 +163,45 @@ class EvidencePassportTests(unittest.TestCase):
         self.assertEqual(normalized["schema"], ep.NORMALIZED_SCHEMA)
         self.assertEqual(normalized["results"][0]["metrics"][0]["value"], 0.8)
         self.assertEqual(normalized["project"]["name"], "Example Lab Project")
+
+    def test_policy_accepts_honest_negative_result_and_required_roles(self) -> None:
+        self.manifest["result_label"] = "criterion_not_met"
+        self.write_manifest()
+        report = ep.load_and_validate(self.manifest_path)
+        policy = ep.load_and_validate_policy(self.write_policy())
+        self.assertEqual(ep.check_policy(report, policy), [])
+
+    def test_policy_rejects_disallowed_evidence_and_missing_artifact_roles(self) -> None:
+        report = ep.load_and_validate(self.manifest_path)
+        policy_data = {
+            **self.policy,
+            "allowed_evidence_classes": ["synthetic"],
+            "required_artifact_roles": ["approval-record"],
+        }
+        failures = ep.check_policy(report, ep.validate_policy_data(policy_data))
+        self.assertIn("evidence_class 'public_dataset' is not allowed by policy", failures)
+        self.assertIn("missing required artifact role(s): approval-record", failures)
+
+    def test_policy_can_require_seed_and_code_commit(self) -> None:
+        report = ep.load_and_validate(self.manifest_path)
+        report["seed"] = None
+        policy_data = {**self.policy, "require_code_commit": True, "require_seed": True}
+        failures = ep.check_policy(report, ep.validate_policy_data(policy_data))
+        self.assertIn("code.commit is required by policy but is not recorded", failures)
+        self.assertIn("seed is required by policy but is not recorded", failures)
+
+    def test_policy_rejects_unknown_fields_and_duplicates(self) -> None:
+        with self.assertRaisesRegex(ep.ManifestError, "unknown field"):
+            ep.validate_policy_data({**self.policy, "allow_anything": True})
+        with self.assertRaisesRegex(ep.ManifestError, "must not contain duplicates"):
+            ep.validate_policy_data({**self.policy, "allowed_evidence_classes": ["public_dataset", "public_dataset"]})
+
+    def test_gate_cli_returns_nonzero_for_policy_mismatch(self) -> None:
+        policy_path = self.write_policy()
+        self.assertEqual(ep.main(["gate", str(self.manifest_path), "--policy", str(policy_path)]), 0)
+        self.policy["allowed_result_labels"] = ["criterion_met"]
+        self.write_policy()
+        self.assertEqual(ep.main(["gate", str(self.manifest_path), "--policy", str(policy_path)]), 3)
 
     def test_duplicate_json_keys_are_rejected(self) -> None:
         self.manifest_path.write_text('{"schema_version":1,"schema_version":1}', encoding="utf-8")
