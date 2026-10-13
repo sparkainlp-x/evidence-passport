@@ -33,6 +33,10 @@ RESULT_LABELS = {
     "synthetic_example",
     "not_stated",
 }
+SYNTHETIC_CRITERION_MET_WARNING = (
+    "evidence_class is 'synthetic' but result_label is 'criterion_met': the criterion "
+    "was met on synthetic inputs only. This is not evidence about real or public data."
+)
 HEX_256 = re.compile(r"^[0-9a-fA-F]{64}$")
 RUN_ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]{0,100}$")
 
@@ -289,7 +293,11 @@ def validate_manifest_data(data: Any, manifest_path: Path) -> dict[str, Any]:
     if protocol_artifacts[0]["computed_sha256"] != protocol_out["sha256"]:
         raise ManifestError("protocol.sha256 must equal the verified SHA-256 of the artifact with role 'protocol'")
 
-    return {
+    warnings: list[str] = []
+    if evidence_class == "synthetic" and result_label == "criterion_met":
+        warnings.append(SYNTHETIC_CRITERION_MET_WARNING)
+
+    report: dict[str, Any] = {
         "schema": NORMALIZED_SCHEMA,
         "tool_version": TOOL_VERSION,
         "run_id": run_id,
@@ -312,6 +320,11 @@ def validate_manifest_data(data: Any, manifest_path: Path) -> dict[str, Any]:
         },
         "notice": DISCLAIMER,
     }
+    # The key is added only when there is something to warn about, so reports
+    # for manifests without warnings stay byte-identical to earlier versions.
+    if warnings:
+        report["warnings"] = warnings
+    return report
 
 
 def load_and_validate(manifest_path: Path) -> dict[str, Any]:
@@ -374,6 +387,10 @@ def render_html(report: dict[str, Any]) -> str:
     )
     limitations = "".join(f"<li>{e(item)}</li>" for item in report["limitations"])
     result_word = report["result_label"].replace("_", " ")
+    warning_html = "".join(
+        f'<div class="card callout warning" role="alert"><strong>WARNING</strong><p>{e(item)}</p></div>'
+        for item in report.get("warnings", [])
+    )
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -393,7 +410,7 @@ main {{ max-width:1100px; margin:0 auto; padding:28px 18px 52px; }} h1 {{ margin
 </head>
 <body><main>
 <header><span class="badge {label_class}">{label}</span><h1>{e(project['name'])}</h1><p>{e(dataset['name'])} · {e(result_word)}</p></header>
-<div class="card callout {'warning' if report['result_label'] == 'criterion_not_met' else ''}"><strong>Interpretation</strong><p>{e(report['interpretation'])}</p></div>
+{warning_html}<div class="card callout {'warning' if report['result_label'] == 'criterion_not_met' else ''}"><strong>Interpretation</strong><p>{e(report['interpretation'])}</p></div>
 <section><h2>Run record</h2><div class="card"><dl class="meta">
 <dt>Project version</dt><dd>{e(project['version'])}</dd><dt>Code version</dt><dd>{e(code['version'])}</dd><dt>Code commit</dt><dd>{e(commit)}</dd>
 <dt>Evidence class</dt><dd>{e(report['evidence_class'])}</dd><dt>Dataset type</dt><dd>{e(dataset['kind'])}</dd><dt>Dataset notes</dt><dd>{e(dataset['description'])}</dd>
@@ -436,6 +453,8 @@ def main(argv: list[str] | None = None) -> int:
     args = make_parser().parse_args(argv)
     try:
         report = load_and_validate(args.manifest)
+        for warning in report.get("warnings", []):
+            print(f"WARNING: {warning}", file=sys.stderr)
         if args.command == "validate":
             print(f"VALID: {report['run_id']} — {report['project']['name']} ({report['evidence_class']})")
             print(f"Verified {len(report['integrity']['files'])} local artifact(s); bundle is internally consistent.")
