@@ -10,8 +10,8 @@ authors:
 repository-code: "https://github.com/sparkainlp-x/evidence-passport"
 url: "https://doi.org/10.5281/zenodo.23165143"
 license: AGPL-3.0-only
-version: "0.1.0"
-date-released: "2026-10-05"
+version: "0.1.1"
+date-released: "2026-10-13"
 doi: 10.5281/zenodo.23165143
 identifiers:
   - type: doi

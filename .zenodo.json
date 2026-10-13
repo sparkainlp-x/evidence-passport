@@ -1,7 +1,7 @@
 {
   "upload_type": "software",
   "title": "Evidence Passport: offline MVP that turns one experiment-run manifest into a static HTML evidence passport and normalized JSON",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "<p><strong>Evidence Passport</strong> is an offline, Python-standard-library MVP that validates one experiment-run manifest and writes a static HTML evidence passport plus normalized JSON. It records declared project, dataset, code, protocol, seed, baseline, metric, limitation, and artifact details. It does <em>not</em> generate data, score signals, or combine metrics.</p><p><strong>Hash honesty.</strong> A matching SHA-256 shows only that a referenced local file is byte-for-byte consistent with the digest recorded in the bundle. It does not prove authorship, lock time, provenance authenticity, or measurement validity.</p><p><strong>Bundled examples.</strong> An OES-Resilience NASA SMAP/MSL public-dataset passport preserves the upstream finding that the preregistered success criterion was <strong>not</strong> met. Three further examples are labelled SYNTHETIC (Multi-Quantum OES, Digital-to-Wave Testbench, Signal Test Commons).</p><p><strong>Limits.</strong> Local metadata-and-reporting MVP only: not a validation authority, experiment runner, clinical device, hardware product, or provenance service. No NASA-beat claim.</p>",
   "creators": [
     {
